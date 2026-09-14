@@ -16,30 +16,26 @@ document.querySelectorAll(".nav a").forEach(a => {
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
-  contactForm.addEventListener("submit", e => {
+  contactForm.addEventListener("submit", function(e) {
     e.preventDefault();
 
-    const formData = new FormData(contactForm);
-
-    const nom = formData.get("nom") || "";
-    const email = formData.get("email") || "";
-    const circuit = formData.get("circuit") || "";
-    const message = formData.get("message") || "";
-
-    const numeroWhatsApp = "212669486946";
+    const nom = contactForm.querySelector('[name="Nom"]').value;
+    const email = contactForm.querySelector('[name="Email"]').value;
+    const telephone = contactForm.querySelector('[name="Telephone"]').value;
+    const circuit = contactForm.querySelector('[name="Circuit"]').value;
+    const message = contactForm.querySelector('[name="Message"]').value;
 
     const texte =
       "Bonjour Merzouga Luxury Desert 👋\n\n" +
       "Je souhaite réserver un séjour.\n\n" +
       "Nom : " + nom + "\n" +
       "Email : " + email + "\n" +
+      "Téléphone : " + telephone + "\n" +
       "Circuit : " + circuit + "\n" +
       "Message : " + message;
 
     const whatsappURL =
-      "https://wa.me/" +
-      numeroWhatsApp +
-      "?text=" +
+      "https://wa.me/212669486946?text=" +
       encodeURIComponent(texte);
 
     window.open(whatsappURL, "_blank");
