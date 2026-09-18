@@ -220,7 +220,11 @@ border:1px solid #eee;
 border-radius:8px;
 overflow:hidden;
 box-shadow:0 8px 22px rgba(0,0,0,.06);
-background:#fff
+background:#fff;
+
+display:flex;
+flex-direction:column;
+height:100%;
 }
 
 .card img{
@@ -229,7 +233,13 @@ height:190px;
 object-fit:cover
 }
 
-.card-body{padding:20px}
+.card-body{
+padding:20px;
+
+display:flex;
+flex-direction:column;
+height:100%;
+}
 
 .tag{
 display:inline-block;
@@ -238,7 +248,8 @@ color:#fff;
 border-radius:15px;
 padding:5px 10px;
 font-size:9px;
-letter-spacing:1px
+letter-spacing:1px;
+width:max-content;
 }
 
 .card h3{
@@ -251,16 +262,69 @@ margin:14px 0 8px
 font-size:12px;
 line-height:1.6;
 color:#66717d;
-min-height:58px
+
+/* Même hauteur pour les descriptions */
+min-height:58px;
+
+margin-bottom:18px;
 }
 
-.card strong{font-size:12px}
+/* PRIX */
+.card strong{
+font-size:12px;
+display:block;
+margin-bottom:18px;
+}
 
-.card a{
-float:right;
-color:#e66d12;
+/* CONTENEUR DES BOUTONS */
+.card-buttons{
+display:flex;
+align-items:stretch;
+gap:14px;
+margin-top:auto;
+width:100%;
+}
+
+/* LES DEUX BOUTONS */
+.card-buttons a{
+float:none !important;
+
+flex:1;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+min-height:58px;
+
+padding:10px 12px;
+
+border-radius:35px;
+
+font-size:14px;
 font-weight:700;
-font-size:12px
+
+text-align:center;
+
+box-sizing:border-box;
+}
+
+/* PLUS D'INFOS */
+.card-buttons .btn-info{
+background:#eeeeee;
+color:#111;
+}
+
+/* RÉSERVER */
+.card-buttons .btn-reserver{
+background:#f47a17;
+color:#fff;
+}
+
+/* EFFET AU SURVOL */
+.card-buttons a:hover{
+transform:translateY(-2px);
+transition:.2s;
 }
 
 
