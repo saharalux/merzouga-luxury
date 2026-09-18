@@ -12,1063 +12,454 @@
   <title>Merzouga Luxury Desert | Sahara Marocain</title>
 
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Styles pour la fenêtre modale (À ajouter idéalement dans style.css) */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    .modal-body ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
+<!-- HEADER -->
 <header class="header">
-
   <a href="/" class="logo">
-
     <span class="logo-mark">⌁</span>
-
     <span>
       <strong>Merzouga</strong>
       <small>LUXURY DESERT</small>
     </span>
-
   </a>
 
-
-  <button
-    class="menu-btn"
-    type="button"
-    aria-label="Ouvrir le menu">
-    ☰
-  </button>
-
+  <button class="menu-btn" type="button" aria-label="Ouvrir le menu">☰</button>
 
   <nav class="nav">
-
-    <a href="/">
-      Accueil
-    </a>
-
-    <a href="/#apropos">
-      À propos
-    </a>
-
-    <!-- IMPORTANT -->
-    <!-- Ce lien ouvre la page circuits -->
-    <a href="/#circuits">
-      Circuits
-    </a>
-
-    <a href="/#galerie">
-      Galerie
-    </a>
-
-    <a href="/#temoignages">
-      Témoignages
-    </a>
-
-    <a href="/#contact">
-      Contact
-    </a>
-
+    <a href="/">Accueil</a>
+    <a href="/#apropos">À propos</a>
+    <a href="/#circuits">Circuits</a>
+    <a href="/#galerie">Galerie</a>
+    <a href="/#temoignages">Témoignages</a>
+    <a href="/#contact">Contact</a>
   </nav>
 
-
-  <a
-    class="nav-cta"
-    href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20souhaite%20réserver%20un%20circuit."
-    target="_blank"
-    rel="noopener noreferrer">
-
+  <a class="nav-cta" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20souhaite%20réserver%20un%20circuit." target="_blank" rel="noopener noreferrer">
     Réserver →
-
   </a>
-
 </header>
-
-
-
-<!-- =====================================================
-     MAIN
-===================================================== -->
 
 <main>
 
-
-<!-- =====================================================
-     ACCUEIL
-===================================================== -->
-
+<!-- ACCUEIL -->
 <section id="accueil" class="hero">
-
   <div class="hero-overlay"></div>
-
-
   <div class="hero-content">
-
-    <p class="eyebrow">
-      UNE EXPÉRIENCE INOUBLIABLE
-    </p>
-
-
-    <h1>
-      Découvrez le<br>
-      <span>Sahara Marocain</span><br>
-      à Merzouga
-    </h1>
-
-
+    <p class="eyebrow">UNE EXPÉRIENCE INOUBLIABLE</p>
+    <h1>Découvrez le<br><span>Sahara Marocain</span><br>à Merzouga</h1>
     <p class="hero-text">
-
       Des dunes dorées, un ciel étoilé et une culture authentique.
       Vivez une aventure exceptionnelle au cœur du désert marocain.
-
     </p>
-
-
     <div class="hero-actions">
-
-      <!-- OUVRE /circuits -->
-
-      <a
-        href="/circuits"
-        class="btn btn-primary">
-
-        Découvrir nos circuits →
-
-      </a>
-
-
-      <a
-        href="/#contact"
-        class="btn btn-light">
-
-        Nous contacter
-
-      </a>
-
+      <a href="/#circuits" class="btn btn-primary">Découvrir nos circuits →</a>
+      <a href="/#contact" class="btn btn-light">Nous contacter</a>
     </div>
-
   </div>
-
-
-  <div class="scroll">
-    ↓ Explorer
-  </div>
-
+  <div class="scroll">↓ Explorer</div>
 </section>
 
-
-
-<!-- =====================================================
-     AVANTAGES
-===================================================== -->
-
+<!-- AVANTAGES -->
 <section class="benefits">
-
-
   <div>
-
     <span>✦</span>
-
-    <h3>
-      Paysages uniques
-    </h3>
-
-    <p>
-      Dunes à perte de vue et panoramas spectaculaires.
-    </p>
-
+    <h3>Paysages uniques</h3>
+    <p>Dunes à perte de vue et panoramas spectaculaires.</p>
   </div>
-
-
-
   <div>
-
     <span>🐪</span>
-
-    <h3>
-      Culture authentique
-    </h3>
-
-    <p>
-      Découvrez les traditions et l'hospitalité locales.
-    </p>
-
+    <h3>Culture authentique</h3>
+    <p>Découvrez les traditions et l'hospitalité locales.</p>
   </div>
-
-
-
   <div>
-
     <span>✓</span>
-
-    <h3>
-      Sécurité & confort
-    </h3>
-
-    <p>
-      Une équipe locale disponible pendant votre séjour.
-    </p>
-
+    <h3>Sécurité & confort</h3>
+    <p>Une équipe locale disponible pendant votre séjour.</p>
   </div>
-
-
-
   <div>
-
     <span>♧</span>
-
-    <h3>
-      Tourisme responsable
-    </h3>
-
-    <p>
-      Des expériences respectueuses du désert et des communautés.
-    </p>
-
+    <h3>Tourisme responsable</h3>
+    <p>Des expériences respectueuses du désert et des communautés.</p>
   </div>
-
-
 </section>
 
-
-
-<!-- =====================================================
-     CIRCUITS
-===================================================== -->
-
+<!-- CIRCUITS -->
 <section id="circuits" class="section">
-
-
   <div class="section-head">
-
     <div>
-
-      <p class="eyebrow dark">
-        NOS CIRCUITS
-      </p>
-
-
-      <h2>
-        Nos expériences populaires
-      </h2>
-
-
-      <p>
-        Choisissez votre aventure et vivez le désert autrement.
-      </p>
-
+      <p class="eyebrow dark">NOS CIRCUITS</p>
+      <h2>Nos expériences populaires</h2>
+      <p>Choisissez votre aventure et vivez le désert autrement.</p>
     </div>
-
-
-    <!-- PAGE COMPLETE DES CIRCUITS -->
-
-    <a
-      href="/circuits"
-      class="btn btn-primary">
-
-      Voir tous les circuits →
-
-    </a>
-
+    <a href="/circuits" class="btn btn-primary">Voir tous les circuits →</a>
   </div>
-
-
 
   <div class="cards">
 
-
-    <!-- =================================================
-         CIRCUIT 1
-    ================================================== -->
-
+    <!-- CIRCUIT 1 -->
     <article class="card">
-
-      <img
-        src="sahara.jpg"
-        alt="Sahara de Merzouga">
-
-
+      <img src="sahara.jpg" alt="Sahara de Merzouga">
       <div class="card-body">
-
-        <span class="tag">
-          2 JOURS / 1 NUIT
-        </span>
-
-
-        <h3>
-          Merzouga Express
-        </h3>
-
-
-        <p>
-
-          Balade à dos de dromadaire,
-          coucher de soleil et nuit sous les étoiles.
-
-        </p>
-
-
-        <strong>
-          À partir de 1 500 DH / personne
-        </strong>
-
-
-        <a
-          href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Merzouga%20Express."
-          target="_blank"
-          rel="noopener noreferrer">
-
-          Réserver →
-
-        </a>
-
+        <span class="tag">2 JOURS / 1 NUIT</span>
+        <h3>Merzouga Express</h3>
+        <p>Balade à dos de dromadaire, coucher de soleil et nuit sous les étoiles.</p>
+        <strong>À partir de 1 500 DH / personne</strong>
+        <div style="display: flex; gap: 10px; margin-top: 15px;">
+          <button class="btn btn-secondary open-modal" data-modal="modal-1">Plus d'infos</button>
+          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Merzouga%20Express." target="_blank" rel="noopener noreferrer">
+            Réserver
+          </a>
+        </div>
       </div>
-
     </article>
 
-
-
-    <!-- =================================================
-         CIRCUIT 2
-    ================================================== -->
-
+    <!-- CIRCUIT 2 -->
     <article class="card">
-
-      <img
-        src="CIELK.jpg"
-        alt="Expérience Sahara">
-
-
+      <img src="CIELK.jpg" alt="Expérience Sahara">
       <div class="card-body">
-
-        <span class="tag">
-          3 JOURS / 2 NUITS
-        </span>
-
-
-        <h3>
-          Expérience Sahara
-        </h3>
-
-
-        <p>
-
-          Dunes, musique berbère,
-          feu de camp et nuits magiques.
-
-        </p>
-
-
-        <strong>
-          À partir de 2 200 DH / personne
-        </strong>
-
-
-        <a
-          href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Expérience%20Sahara."
-          target="_blank"
-          rel="noopener noreferrer">
-
-          Réserver →
-
-        </a>
-
+        <span class="tag">3 JOURS / 2 NUITS</span>
+        <h3>Expérience Sahara</h3>
+        <p>Dunes, musique berbère, feu de camp et nuits magiques.</p>
+        <strong>À partir de 2 200 DH / personne</strong>
+        <div style="display: flex; gap: 10px; margin-top: 15px;">
+          <button class="btn btn-secondary open-modal" data-modal="modal-2">Plus d'infos</button>
+          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Expérience%20Sahara." target="_blank" rel="noopener noreferrer">
+            Réserver
+          </a>
+        </div>
       </div>
-
     </article>
 
-
-
-    <!-- =================================================
-         CIRCUIT 3
-    ================================================== -->
-
+    <!-- CIRCUIT 3 -->
     <article class="card">
-
-      <img
-        src="GUAD.jpg"
-        alt="Aventure 4x4 Merzouga">
-
-
+      <img src="GUAD.jpg" alt="Aventure 4x4 Merzouga">
       <div class="card-body">
-
-        <span class="tag">
-          4 JOURS / 3 NUITS
-        </span>
-
-
-        <h3>
-          Aventure 4×4
-        </h3>
-
-
-        <p>
-
-          Explorez les paysages variés du désert
-          et les oasis cachées.
-
-        </p>
-
-
-        <strong>
-          À partir de 3 400 DH / personne
-        </strong>
-
-
-        <a
-          href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Aventure%204x4."
-          target="_blank"
-          rel="noopener noreferrer">
-
-          Réserver →
-
-        </a>
-
+        <span class="tag">4 JOURS / 3 NUITS</span>
+        <h3>Aventure 4×4</h3>
+        <p>Explorez les paysages variés du désert et les oasis cachées.</p>
+        <strong>À partir de 3 400 DH / personne</strong>
+        <div style="display: flex; gap: 10px; margin-top: 15px;">
+          <button class="btn btn-secondary open-modal" data-modal="modal-3">Plus d'infos</button>
+          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Aventure%204x4." target="_blank" rel="noopener noreferrer">
+            Réserver
+          </a>
+        </div>
       </div>
-
     </article>
 
-
-
-    <!-- =================================================
-         CIRCUIT 4
-    ================================================== -->
-
+    <!-- CIRCUIT 4 -->
     <article class="card">
-
-      <img
-        src="SAHA.jpg"
-        alt="Séjour privé Merzouga">
-
-
+      <img src="SAHA.jpg" alt="Séjour privé Merzouga">
       <div class="card-body">
-
-        <span class="tag">
-          SUR MESURE
-        </span>
-
-
-        <h3>
-          Séjour privé
-        </h3>
-
-
-        <p>
-
-          Créez votre itinéraire selon vos envies,
-          votre rythme et votre budget.
-
-        </p>
-
-
-        <strong>
-          Sur demande
-        </strong>
-
-
-        <a
-          href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20souhaite%20un%20devis%20pour%20un%20séjour%20privé."
-          target="_blank"
-          rel="noopener noreferrer">
-
-          Demander un devis →
-
-        </a>
-
+        <span class="tag">SUR MESURE</span>
+        <h3>Séjour privé</h3>
+        <p>Créez votre itinéraire selon vos envies, votre rythme et votre budget.</p>
+        <strong>Sur demande</strong>
+        <div style="display: flex; gap: 10px; margin-top: 15px;">
+          <button class="btn btn-secondary open-modal" data-modal="modal-4">Plus d'infos</button>
+          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20souhaite%20un%20devis%20pour%20un%20séjour%20privé." target="_blank" rel="noopener noreferrer">
+            Devis
+          </a>
+        </div>
       </div>
-
     </article>
-
 
   </div>
-
 </section>
 
+<!-- FENÊTRES MODALES POUR DÉTAILS CIRCUITS -->
 
-
-<!-- =====================================================
-     À PROPOS
-===================================================== -->
-
-<section
-  id="apropos"
-  class="about section">
-
-
-  <div class="about-image">
-
-    <img
-      src="https://images.unsplash.com/photo-1489493887464-892be6d1daae?auto=format&fit=crop&w=1200&q=85"
-      alt="Paysage du sud marocain">
-
+<!-- Modal 1 -->
+<div id="modal-1" class="modal">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h2>Merzouga Express (2J / 1N)</h2>
+    <div class="modal-body">
+      <strong>Programme détaillé :</strong>
+      <ul>
+        <li><strong>Jour 1 :</strong> Départ l'après-midi à dos de dromadaire. Traversée des dunes de l'Erg Chebbi, observation du coucher de soleil. Dîner traditionnel et soirée musique berbère autour du feu. Nuit sous tente luxe.</li>
+        <li><strong>Jour 2 :</strong> Lever du soleil dans les dunes, petit-déjeuner traditionnel, retour en dromadaire ou 4x4.</li>
+      </ul>
+      <strong>Inclus :</strong>
+      <p>Dromadaire, guide local, dîner, petit-déjeuner, hébergement en bivouac luxe.</p>
+    </div>
   </div>
+</div>
 
+<!-- Modal 2 -->
+<div id="modal-2" class="modal">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h2>Expérience Sahara (3J / 2N)</h2>
+    <div class="modal-body">
+      <strong>Programme détaillé :</strong>
+      <ul>
+        <li><strong>Jour 1 :</strong> Accueil, trek en dromadaire et installation au campement. Dîner et nuit étoilée.</li>
+        <li><strong>Jour 2 :</strong> Journée en 4x4 à la découverte des nomades, des mines désertes et du village Gnawa de Khamlia. Deuxième nuit au bivouac.</li>
+        <li><strong>Jour 3 :</strong> Lever de soleil sur les plus hautes dunes, petit-déjeuner et fin de la prestation.</li>
+      </ul>
+      <strong>Inclus :</strong>
+      <p>Pension complète, excursions 4x4, visites culturelles, guide privé.</p>
+    </div>
+  </div>
+</div>
 
+<!-- Modal 3 -->
+<div id="modal-3" class="modal">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h2>Aventure 4×4 (4J / 3N)</h2>
+    <div class="modal-body">
+      <strong>Programme détaillé :</strong>
+      <ul>
+        <li><strong>Jour 1-2 :</strong> Traversée des pistes du Paris-Dakar, visite des oasiens, gravures rupestres et nuit en tente nomade.</li>
+        <li><strong>Jour 3-4 :</strong> Exploration approfondie de l'Erg Chebbi, sandboarding, rencontre avec les artisans locaux et dîner gastronomique.</li>
+      </ul>
+      <strong>Inclus :</strong>
+      <p>Chauffeur/Guide privé 4x4, carburant, repas, activités de glisse sur sable.</p>
+    </div>
+  </div>
+</div>
 
+<!-- Modal 4 -->
+<div id="modal-4" class="modal">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h2>Séjour privé sur mesure</h2>
+    <div class="modal-body">
+      <p>Concevez une aventure personnalisée selon vos critères :</p>
+      <ul>
+        <li>Transferts privatifs depuis Marrakech, Fès ou Ouarzazate.</li>
+        <li>Hébergement de haut standing (Bivouac VIP / Kasbah).</li>
+        <li>Activités au choix : Quad, Buggy, Survol en montgolfière, Astronomie guidée.</li>
+      </ul>
+      <p>Contactez-nous directement par téléphone ou WhatsApp pour construire votre itinéraire.</p>
+    </div>
+  </div>
+</div>
+
+<!-- À PROPOS -->
+<section id="apropos" class="about section">
+  <div class="about-image">
+    <img src="https://images.unsplash.com/photo-1489493887464-892be6d1daae?auto=format&fit=crop&w=1200&q=85" alt="Paysage du sud marocain">
+  </div>
   <div class="about-text">
-
-    <p class="eyebrow dark">
-      POURQUOI NOUS CHOISIR ?
-    </p>
-
-
-    <h2>
-      Le désert vous attend...
-    </h2>
-
-
+    <p class="eyebrow dark">POURQUOI NOUS CHOISIR ?</p>
+    <h2>Le désert vous attend...</h2>
     <p>
-
       Merzouga Luxury Desert vous accompagne pour découvrir
       les dunes de l'Erg Chebbi et la richesse du Sud marocain
       à travers des expériences authentiques et soigneusement organisées.
-
     </p>
-
-
     <ul>
-
-      <li>
-        Des paysages à couper le souffle
-      </li>
-
-      <li>
-        Une gastronomie locale savoureuse
-      </li>
-
-      <li>
-        Une immersion dans la culture berbère
-      </li>
-
-      <li>
-        Une équipe locale passionnée et disponible
-      </li>
-
+      <li>Des paysages à couper le souffle</li>
+      <li>Une gastronomie locale savoureuse</li>
+      <li>Une immersion dans la culture berbère</li>
+      <li>Une équipe locale passionnée et disponible</li>
     </ul>
-
-
-    <a
-      href="/#contact"
-      class="btn btn-primary">
-
-      Préparer mon voyage →
-
-    </a>
-
+    <a href="/#contact" class="btn btn-primary">Préparer mon voyage →</a>
   </div>
-
 </section>
 
-
-
-<!-- =====================================================
-     GALERIE
-===================================================== -->
-
-<section
-  id="galerie"
-  class="section gallery-section">
-
-
+<!-- GALERIE -->
+<section id="galerie" class="section gallery-section">
   <div class="section-head">
-
     <div>
-
-      <p class="eyebrow dark">
-        GALERIE
-      </p>
-
-
-      <h2>
-        Quelques souvenirs du désert
-      </h2>
-
-
-      <p>
-        Des moments à vivre, photographier et partager.
-      </p>
-
+      <p class="eyebrow dark">GALERIE</p>
+      <h2>Quelques souvenirs du désert</h2>
+      <p>Des moments à vivre, photographier et partager.</p>
     </div>
-
   </div>
-
-
-
   <div class="gallery">
-
-
-    <img
-      src="dromadaires.jpg"
-      alt="Dromadaires dans le Sahara">
-
-
-    <img
-      src="desertmaroc.jpg"
-      alt="Désert marocain">
-
-
-    <img
-      src="CIELK.jpg"
-      alt="Paysage du Sahara">
-
-
-    <img
-      src="oasismaroc.jpg"
-      alt="Oasis du Maroc">
-
-
-    <img
-      src="GUAD.jpg"
-      alt="Paysage de Merzouga">
-
+    <img src="dromadaires.jpg" alt="Dromadaires dans le Sahara">
+    <img src="desertmaroc.jpg" alt="Désert marocain">
+    <img src="CIELK.jpg" alt="Paysage du Sahara">
+    <img src="oasismaroc.jpg" alt="Oasis du Maroc">
+    <img src="GUAD.jpg" alt="Paysage de Merzouga">
   </div>
-
 </section>
 
-
-
-<!-- =====================================================
-     TÉMOIGNAGES
-===================================================== -->
-
-<section
-  id="temoignages"
-  class="testimonials">
-
-
+<!-- TÉMOIGNAGES -->
+<section id="temoignages" class="testimonials">
   <div class="section-head light">
-
     <div>
-
-      <p class="eyebrow">
-        TÉMOIGNAGES
-      </p>
-
-
-      <h2>
-        Ils ont vécu l'aventure
-      </h2>
-
+      <p class="eyebrow">TÉMOIGNAGES</p>
+      <h2>Ils ont vécu l'aventure</h2>
     </div>
-
   </div>
-
-
-
   <div class="testimonial-grid">
-
-
     <blockquote>
-
-      <p>
-
-        “Une expérience magique ! Tout était parfaitement
-        organisé et notre guide était formidable.”
-
-      </p>
-
-
-      <strong>
-        Sophie L.
-      </strong>
-
-
-      <span>
-        ★★★★★
-      </span>
-
+      <p>“Une expérience magique ! Tout était parfaitement organisé et notre guide était formidable.”</p>
+      <strong>Sophie L.</strong>
+      <span>★★★★★</span>
     </blockquote>
-
-
-
     <blockquote>
-
-      <p>
-
-        “Le coucher de soleil sur les dunes est tout simplement
-        incroyable. Merci à toute l'équipe !”
-
-      </p>
-
-
-      <strong>
-        Thomas B.
-      </strong>
-
-
-      <span>
-        ★★★★★
-      </span>
-
+      <p>“Le coucher de soleil sur les dunes est tout simplement incroyable. Merci à toute l'équipe !”</p>
+      <strong>Thomas B.</strong>
+      <span>★★★★★</span>
     </blockquote>
-
-
-
     <blockquote>
-
-      <p>
-
-        “Un voyage authentique, des gens formidables
-        et des paysages à couper le souffle.”
-
-      </p>
-
-
-      <strong>
-        Camille D.
-      </strong>
-
-
-      <span>
-        ★★★★★
-      </span>
-
+      <p>“Un voyage authentique, des gens formidables et des paysages à couper le souffle.”</p>
+      <strong>Camille D.</strong>
+      <span>★★★★★</span>
     </blockquote>
-
-
   </div>
-
 </section>
 
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section
-  id="contact"
-  class="contact section">
-
-
+<!-- CONTACT -->
+<section id="contact" class="contact section">
   <div>
-
-    <p class="eyebrow dark">
-      CONTACT
-    </p>
-
-
-    <h2>
-      Prêt à découvrir Merzouga ?
-    </h2>
-
-
-    <p>
-
-      Envoyez-nous votre demande. Nous vous répondrons
-      rapidement pour préparer votre séjour.
-
-    </p>
-
-
+    <p class="eyebrow dark">CONTACT</p>
+    <h2>Prêt à découvrir Merzouga ?</h2>
+    <p>Envoyez-nous votre demande. Nous vous répondrons rapidement pour préparer votre séjour.</p>
 
     <div class="contact-info">
-
-
-      <p>
-
-        📞
-
-        <a href="tel:+212669486946">
-
-          +212 6 69 48 69 46
-
-        </a>
-
-      </p>
-
-
-
-      <p>
-
-        ✉️
-
-        <a href="mailto:mbenhssain@enameknes.ac.ma">
-
-          mbenhssain@enameknes.ac.ma
-
-        </a>
-
-      </p>
-
-
-
-      <p>
-        📍 Merzouga, Maroc
-      </p>
-
-
-
-      <p>
-
-        💬
-
-        <a
-          href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20souhaite%20avoir%20plus%20d'informations."
-          target="_blank"
-          rel="noopener noreferrer">
-
-          WhatsApp
-
-        </a>
-
-      </p>
-
-
+      <p>📞 <a href="tel:+212669486946">+212 6 69 48 69 46</a></p>
+      <p>✉️ <a href="mailto:mbenhssain@enameknes.ac.ma">mbenhssain@enameknes.ac.ma</a></p>
+      <p>📍 Merzouga, Maroc</p>
+      <p>💬 <a href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20souhaite%20avoir%20plus%20d'informations." target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
     </div>
-
-
   </div>
 
+  <form id="contactForm" action="https://formsubmit.co/mbenhssain@enameknes.ac.ma" method="POST">
+    <input type="hidden" name="_subject" value="Nouvelle demande - Merzouga Luxury Desert">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="true">
 
+    <input type="text" name="Nom" placeholder="Votre nom" required>
+    <input type="email" name="Email" placeholder="Votre email" required>
+    <input type="tel" name="Telephone" placeholder="Téléphone / WhatsApp" required>
 
-  <!-- =================================================
-       FORMULAIRE
-  ================================================== -->
-
-  <form
-    id="contactForm"
-    action="https://formsubmit.co/mbenhssain@enameknes.ac.ma"
-    method="POST">
-
-
-    <input
-      type="hidden"
-      name="_subject"
-      value="Nouvelle demande - Merzouga Luxury Desert">
-
-
-    <input
-      type="hidden"
-      name="_template"
-      value="table">
-
-
-    <input
-      type="hidden"
-      name="_captcha"
-      value="true">
-
-
-    <input
-      type="text"
-      name="Nom"
-      placeholder="Votre nom"
-      required>
-
-
-    <input
-      type="email"
-      name="Email"
-      placeholder="Votre email"
-      required>
-
-
-    <input
-      type="tel"
-      name="Telephone"
-      placeholder="Téléphone / WhatsApp"
-      required>
-
-
-    <select
-      name="Circuit"
-      required>
-
-      <option value="">
-        Choisissez une expérience
-      </option>
-
-      <option value="Merzouga Express">
-        Merzouga Express
-      </option>
-
-      <option value="Expérience Sahara">
-        Expérience Sahara
-      </option>
-
-      <option value="Aventure 4x4">
-        Aventure 4×4
-      </option>
-
-      <option value="Séjour privé">
-        Séjour privé
-      </option>
-
+    <select name="Circuit" required>
+      <option value="">Choisissez une expérience</option>
+      <option value="Merzouga Express">Merzouga Express</option>
+      <option value="Expérience Sahara">Expérience Sahara</option>
+      <option value="Aventure 4x4">Aventure 4×4</option>
+      <option value="Séjour privé">Séjour privé</option>
     </select>
 
-
-    <textarea
-      name="Message"
-      rows="5"
-      placeholder="Votre message"
-      required></textarea>
-
-
-    <button
-      class="btn btn-primary"
-      type="submit">
-
-      Envoyer ma demande →
-
-    </button>
-
-
+    <textarea name="Message" rows="5" placeholder="Votre message" required></textarea>
+    <button class="btn btn-primary" type="submit">Envoyer ma demande →</button>
   </form>
-
 </section>
-
 
 </main>
 
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
+<!-- FOOTER -->
 <footer class="footer">
-
-
   <div>
-
-    <div class="footer-logo">
-
-      Merzouga
-
-      <span>
-        Luxury Desert
-      </span>
-
-    </div>
-
-
-    <p>
-
-      Plus qu'un voyage, une expérience
-      au cœur du Sahara marocain.
-
-    </p>
-
+    <div class="footer-logo">Merzouga <span>Luxury Desert</span></div>
+    <p>Plus qu'un voyage, une expérience au cœur du Sahara marocain.</p>
   </div>
-
-
-
   <div>
-
-    <h4>
-      Navigation
-    </h4>
-
-
-    <a href="/">
-      Accueil
-    </a>
-
-
-    <a href="/#apropos">
-      À propos
-    </a>
-
-
-    <a href="/circuits">
-      Circuits
-    </a>
-
-
-    <a href="/#galerie">
-      Galerie
-    </a>
-
-
-    <a href="/#contact">
-      Contact
-    </a>
-
+    <h4>Navigation</h4>
+    <a href="/">Accueil</a>
+    <a href="/#apropos">À propos</a>
+    <a href="/circuits">Circuits</a>
+    <a href="/#galerie">Galerie</a>
+    <a href="/#contact">Contact</a>
   </div>
-
-
-
   <div>
-
-    <h4>
-      Contact
-    </h4>
-
-
-    <p>
-      +212 6 69 48 69 46
-    </p>
-
-
-    <p>
-      Merzouga, Maroc
-    </p>
-
-
-    <p>
-      mbenhssain@enameknes.ac.ma
-    </p>
-
+    <h4>Contact</h4>
+    <p>+212 6 69 48 69 46</p>
+    <p>Merzouga, Maroc</p>
+    <p>mbenhssain@enameknes.ac.ma</p>
   </div>
-
-
-
   <div>
-
-    <h4>
-      Réseaux sociaux
-    </h4>
-
-
+    <h4>Réseaux sociaux</h4>
     <div class="social">
-
-
-      <a href="#">
-        Instagram
-      </a>
-
-
-      <a href="#">
-        Facebook
-      </a>
-
-
-      <a
-        href="https://wa.me/212669486946"
-        target="_blank"
-        rel="noopener noreferrer">
-
-        WhatsApp
-
-      </a>
-
-
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="https://wa.me/212669486946" target="_blank" rel="noopener noreferrer">WhatsApp</a>
     </div>
-
   </div>
-
-
-
   <div class="copyright">
-
-    © 2026 Merzouga Luxury Desert.
-    Tous droits réservés.
-
+    © 2026 Merzouga Luxury Desert. Tous droits réservés.
   </div>
-
-
 </footer>
 
+<!-- JAVASCRIPT MODALES -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const openButtons = document.querySelectorAll('.open-modal');
+    const closeButtons = document.querySelectorAll('.modal-close');
+    const modals = document.querySelectorAll('.modal');
 
+    // Ouvrir la modale
+    openButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        if (modal) modal.classList.add('active');
+      });
+    });
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
+    // Fermer via le bouton de fermeture
+    closeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        button.closest('.modal').classList.remove('active');
+      });
+    });
 
-<script src="script.js"></script>
-
+    // Fermer en cliquant à l'extérieur de la modale
+    window.addEventListener('click', (event) => {
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.classList.remove('active');
+        }
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
