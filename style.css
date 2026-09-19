@@ -276,21 +276,22 @@ display:block;
 margin-bottom:18px;
 }
 
-/* CONTENEUR DES BOUTONS */
-.card-buttons{
+/* =========================
+   BOUTONS DES CIRCUITS
+   ========================= */
+
+.card-actions{
 display:flex;
-align-items:stretch;
+align-items:center;
+justify-content:stretch;
 gap:14px;
 margin-top:auto;
 width:100%;
 }
 
-/* LES DEUX BOUTONS */
-.card-buttons a{
-float:none !important;
-
+/* Les deux boutons sur la même ligne */
+.card-actions .btn{
 flex:1;
-
 display:flex;
 align-items:center;
 justify-content:center;
@@ -305,28 +306,28 @@ font-size:14px;
 font-weight:700;
 
 text-align:center;
-
 box-sizing:border-box;
+
+white-space:normal;
 }
 
-/* PLUS D'INFOS */
-.card-buttons .btn-info{
+/* Bouton Plus d'infos */
+.card-actions .btn-secondary{
 background:#eeeeee;
 color:#111;
 }
 
-/* RÉSERVER */
-.card-buttons .btn-reserver{
+/* Bouton Réserver / Devis */
+.card-actions .btn-primary{
 background:#f47a17;
 color:#fff;
 }
 
-/* EFFET AU SURVOL */
-.card-buttons a:hover{
+/* Effet au survol */
+.card-actions .btn:hover{
 transform:translateY(-2px);
-transition:.2s;
+transition:0.2s;
 }
-
 
 /* =========================
    ABOUT
