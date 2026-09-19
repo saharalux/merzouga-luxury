@@ -12,8 +12,60 @@
   <title>Merzouga Luxury Desert | Sahara Marocain</title>
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- =====================================================
+       CORRECTION DES BOUTONS DES CIRCUITS
+  ====================================================== -->
   <style>
-    /* Styles pour la fenêtre modale (À intégrer dans style.css) */
+    .card-actions {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 14px !important;
+      width: 100% !important;
+      margin-top: auto !important;
+    }
+
+    .card-actions .btn {
+      flex: 1 1 0 !important;
+      width: 50% !important;
+      min-width: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      box-sizing: border-box !important;
+      white-space: normal !important;
+    }
+
+    .card-actions .btn-secondary {
+      background: #eeeeee !important;
+      color: #111 !important;
+    }
+
+    .card-actions .btn-primary {
+      background: #f47a17 !important;
+      color: #fff !important;
+    }
+
+    @media (max-width: 560px) {
+      .card-actions {
+        flex-direction: row !important;
+        gap: 8px !important;
+      }
+
+      .card-actions .btn {
+        width: 50% !important;
+        padding: 12px 8px !important;
+        font-size: 13px !important;
+      }
+    }
+  </style>
+
+  <!-- =====================================================
+       STYLES DES FENÊTRES MODALES
+  ====================================================== -->
+  <style>
     .modal {
       display: none;
       position: fixed;
@@ -71,6 +123,7 @@
       border-bottom: 2px solid #e0e0e0;
     }
   </style>
+
 </head>
 
 <body>
@@ -118,44 +171,72 @@
 
 <!-- ACCUEIL -->
 <section id="accueil" class="hero">
+
   <div class="hero-overlay"></div>
+
   <div class="hero-content">
+
     <p class="eyebrow">UNE EXPÉRIENCE INOUBLIABLE</p>
-    <h1>Découvrez le<br><span>Sahara Marocain</span><br>à Merzouga</h1>
+
+    <h1>
+      Découvrez le<br>
+      <span>Sahara Marocain</span><br>
+      à Merzouga
+    </h1>
+
     <p class="hero-text">
       Des dunes dorées, un ciel étoilé et une culture authentique.
       Vivez une aventure exceptionnelle au cœur du désert marocain.
     </p>
+
     <div class="hero-actions">
-      <a href="/#circuits" class="btn btn-primary">Découvrir nos circuits →</a>
-      <a href="/#contact" class="btn btn-light">Nous contacter</a>
+
+      <a href="/#circuits" class="btn btn-primary">
+        Découvrir nos circuits →
+      </a>
+
+      <a href="/#contact" class="btn btn-light">
+        Nous contacter
+      </a>
+
     </div>
+
   </div>
+
   <div class="scroll">↓ Explorer</div>
+
 </section>
 
-<!-- AVANTAGES -->
+<!-- =====================================================
+     AVANTAGES
+===================================================== -->
+
 <section class="benefits">
+
   <div>
     <span>✦</span>
     <h3>Paysages uniques</h3>
     <p>Dunes à perte de vue et panoramas spectaculaires.</p>
   </div>
+
   <div>
     <span>🐪</span>
     <h3>Culture authentique</h3>
     <p>Découvrez les traditions et l'hospitalité locales.</p>
   </div>
+
   <div>
     <span>✓</span>
     <h3>Sécurité & confort</h3>
     <p>Une équipe locale disponible pendant votre séjour.</p>
   </div>
+
   <div>
     <span>♧</span>
     <h3>Tourisme responsable</h3>
     <p>Des expériences respectueuses du désert et des communautés.</p>
   </div>
+
 </section>
 
 <!-- =====================================================
@@ -165,597 +246,1697 @@
 <section id="circuits" class="section">
 
   <div class="section-head">
+
     <div>
       <p class="eyebrow dark">NOS CIRCUITS</p>
       <h2>Nos expériences populaires</h2>
       <p>Choisissez votre aventure et vivez le désert autrement.</p>
     </div>
-    <a href="/circuits" class="btn btn-primary">Voir tous les circuits →</a>
+
+    <a href="/circuits" class="btn btn-primary">
+      Voir tous les circuits →
+    </a>
+
   </div>
 
-  <!-- CATEGORIE 1 : CIRCUITS DEPUIS MERZOUGA -->
-  <h3 class="sub-section-title">📍 Circuits au départ de Merzouga</h3>
+
+  <!-- =====================================================
+       CATEGORIE 1 : MERZOUGA
+  ====================================================== -->
+
+  <h3 class="sub-section-title">
+    📍 Circuits au départ de Merzouga
+  </h3>
 
   <div class="cards">
 
+    <!-- CIRCUIT 1 -->
     <article class="card">
+
       <img src="sahara.jpg" alt="Sahara de Merzouga">
+
       <div class="card-body">
+
         <span class="tag">2 JOURS / 1 NUIT</span>
+
         <h3>Merzouga Express</h3>
-        <p>Balade à dos de dromadaire, coucher de soleil et nuit sous les étoiles.</p>
-        <strong>À partir de 1 500 DH / personne</strong>
+
+        <p>
+          Balade à dos de dromadaire, coucher de soleil et nuit sous les étoiles.
+        </p>
+
+        <strong>
+          À partir de 1 500 DH / personne
+        </strong>
+
         <div class="card-actions">
-          <button class="btn btn-secondary open-modal" data-modal="modal-m1">Plus d'infos</button>
-          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Merzouga%20Express." target="_blank" rel="noopener noreferrer">Réserver</a>
+
+          <button
+            class="btn btn-secondary open-modal"
+            data-modal="modal-m1">
+            Plus d'infos
+          </button>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Merzouga%20Express."
+            target="_blank"
+            rel="noopener noreferrer">
+            Réserver
+          </a>
+
         </div>
+
       </div>
+
     </article>
 
+
+    <!-- CIRCUIT 2 -->
     <article class="card">
+
       <img src="CIELK.jpg" alt="Expérience Sahara">
+
       <div class="card-body">
+
         <span class="tag">3 JOURS / 2 NUITS</span>
+
         <h3>Expérience Sahara</h3>
-        <p>Dunes, musique berbère, feu de camp et nuits magiques.</p>
-        <strong>À partir de 2 200 DH / personne</strong>
+
+        <p>
+          Dunes, musique berbère, feu de camp et nuits magiques.
+        </p>
+
+        <strong>
+          À partir de 2 200 DH / personne
+        </strong>
+
         <div class="card-actions">
-          <button class="btn btn-secondary open-modal" data-modal="modal-m2">Plus d'infos</button>
-          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Expérience%20Sahara." target="_blank" rel="noopener noreferrer">Réserver</a>
+
+          <button
+            class="btn btn-secondary open-modal"
+            data-modal="modal-m2">
+            Plus d'infos
+          </button>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Expérience%20Sahara."
+            target="_blank"
+            rel="noopener noreferrer">
+            Réserver
+          </a>
+
         </div>
+
       </div>
+
     </article>
 
+
+    <!-- CIRCUIT 3 -->
     <article class="card">
+
       <img src="GUAD.jpg" alt="Aventure 4x4 Merzouga">
+
       <div class="card-body">
+
         <span class="tag">4 JOURS / 3 NUITS</span>
+
         <h3>Aventure 4×4</h3>
-        <p>Explorez les paysages variés du désert et les oasis cachées.</p>
-        <strong>À partir de 3 400 DH / personne</strong>
+
+        <p>
+          Explorez les paysages variés du désert et les oasis cachées.
+        </p>
+
+        <strong>
+          À partir de 3 400 DH / personne
+        </strong>
+
         <div class="card-actions">
-          <button class="btn btn-secondary open-modal" data-modal="modal-m3">Plus d'infos</button>
-          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Aventure%204x4." target="_blank" rel="noopener noreferrer">Réserver</a>
+
+          <button
+            class="btn btn-secondary open-modal"
+            data-modal="modal-m3">
+            Plus d'infos
+          </button>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Aventure%204x4."
+            target="_blank"
+            rel="noopener noreferrer">
+            Réserver
+          </a>
+
         </div>
+
       </div>
+
     </article>
 
+
+    <!-- CIRCUIT 4 -->
     <article class="card">
+
       <img src="SAHA.jpg" alt="Séjour privé Merzouga">
+
       <div class="card-body">
+
         <span class="tag">SUR MESURE</span>
+
         <h3>Séjour privé</h3>
-        <p>Créez votre itinéraire selon vos envies, votre rythme et votre budget.</p>
+
+        <p>
+          Créez votre itinéraire selon vos envies, votre rythme et votre budget.
+        </p>
+
         <strong>Sur demande</strong>
+
         <div class="card-actions">
-          <button class="btn btn-secondary open-modal" data-modal="modal-m4">Plus d'infos</button>
-          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20souhaite%20un%20devis%20pour%20un%20séjour%20privé." target="_blank" rel="noopener noreferrer">Devis</a>
+
+          <button
+            class="btn btn-secondary open-modal"
+            data-modal="modal-m4">
+            Plus d'infos
+          </button>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20souhaite%20un%20devis%20pour%20un%20séjour%20privé."
+            target="_blank"
+            rel="noopener noreferrer">
+            Devis
+          </a>
+
         </div>
+
       </div>
+
     </article>
 
   </div>
 
-  <!-- CATEGORIE 2 : EXCURSIONS AU DEPART DE FÈS -->
-  <h3 class="sub-section-title">🕌 Excursions dans le désert au départ de Fès</h3>
+
+  <!-- =====================================================
+       CATEGORIE 2 : FÈS
+  ====================================================== -->
+
+  <h3 class="sub-section-title">
+    🕌 Excursions dans le désert au départ de Fès
+  </h3>
 
   <div class="cards">
 
     <article class="card">
+
       <img src="IFRAN.jpg" alt="Le magnifique Sahara Erg Chebbi">
+
       <div class="card-body">
+
         <span class="tag">4 JOURS / Erg Chebbi</span>
+
         <h3>Le magnifique Sahara</h3>
-        <p>Circuit de luxe au départ de Fès. Découvrez le glamping dans un cadre saharien exceptionnel.</p>
-        <strong>Depuis 5 550 MAD / personne</strong>
+
+        <p>
+          Circuit de luxe au départ de Fès.
+          Découvrez le glamping dans un cadre saharien exceptionnel.
+        </p>
+
+        <strong>
+          Depuis 5 550 MAD / personne
+        </strong>
+
         <div class="card-actions">
-          <button class="btn btn-secondary open-modal" data-modal="modal-f1">Plus d'infos</button>
-          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Le%20magnifique%20Sahara%20au%20départ%20de%20Fès." target="_blank" rel="noopener noreferrer">Réserver</a>
+
+          <button
+            class="btn btn-secondary open-modal"
+            data-modal="modal-f1">
+            Plus d'infos
+          </button>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Le%20magnifique%20Sahara%20au%20départ%20de%20Fès."
+            target="_blank"
+            rel="noopener noreferrer">
+            Réserver
+          </a>
+
         </div>
+
       </div>
+
     </article>
 
+
     <article class="card">
+
       <img src="ZIZVAL.jpg" alt="Un soupçon de Sahara Erg Chebbi">
+
       <div class="card-body">
+
         <span class="tag">3 JOURS / Erg Chebbi</span>
+
         <h3>Un soupçon de Sahara</h3>
-        <p>Circuit de luxe au départ de Fès. Glamping au cœur de paysages sahariens époustouflants.</p>
-        <strong>Depuis 4 350 MAD / personne</strong>
+
+        <p>
+          Circuit de luxe au départ de Fès.
+          Glamping au cœur de paysages sahariens époustouflants.
+        </p>
+
+        <strong>
+          Depuis 4 350 MAD / personne
+        </strong>
+
         <div class="card-actions">
-          <button class="btn btn-secondary open-modal" data-modal="modal-f2">Plus d'infos</button>
-          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Un%20soupçon%20de%20Sahara%20au%20départ%20de%20Fès." target="_blank" rel="noopener noreferrer">Réserver</a>
+
+          <button
+            class="btn btn-secondary open-modal"
+            data-modal="modal-f2">
+            Plus d'infos
+          </button>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Un%20soupçon%20de%20Sahara%20au%20départ%20de%20Fès."
+            target="_blank"
+            rel="noopener noreferrer">
+            Réserver
+          </a>
+
         </div>
+
       </div>
+
     </article>
 
+
     <article class="card">
+
       <img src="MUSIQ.jpg" alt="Aventure dans le désert Erg Chebbi">
+
       <div class="card-body">
+
         <span class="tag">3 JOURS / Erg Chebbi</span>
+
         <h3>Aventure dans le désert</h3>
-        <p>Aventure de trois jours dans le désert au départ de Fès, incluant deux nuits à Erg Chebbi.</p>
-        <strong>Depuis 4 800 MAD / personne</strong>
+
+        <p>
+          Aventure de trois jours dans le désert au départ de Fès,
+          incluant deux nuits à Erg Chebbi.
+        </p>
+
+        <strong>
+          Depuis 4 800 MAD / personne
+        </strong>
+
         <div class="card-actions">
-          <button class="btn btn-secondary open-modal" data-modal="modal-f3">Plus d'infos</button>
-          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Aventure%20dans%20le%20désert%20au%20départ%20de%20Fès." target="_blank" rel="noopener noreferrer">Réserver</a>
+
+          <button
+            class="btn btn-secondary open-modal"
+            data-modal="modal-f3">
+            Plus d'infos
+          </button>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Aventure%20dans%20le%20désert%20au%20départ%20de%20Fès."
+            target="_blank"
+            rel="noopener noreferrer">
+            Réserver
+          </a>
+
         </div>
+
       </div>
+
     </article>
 
+
     <article class="card">
+
       <img src="AITBENHDOU.jpg" alt="Traversée de Fès à Marrakech via Merzouga">
+
       <div class="card-body">
+
         <span class="tag">4 JOURS / Fès vers Marrakech</span>
+
         <h3>Grand Tour Fès - Désert - Marrakech</h3>
-        <p>Traversée complète depuis Fès vers les dunes de Merzouga jusqu'à Marrakech.</p>
-        <strong>Depuis 6 200 MAD / personne</strong>
+
+        <p>
+          Traversée complète depuis Fès vers les dunes de Merzouga
+          jusqu'à Marrakech.
+        </p>
+
+        <strong>
+          Depuis 6 200 MAD / personne
+        </strong>
+
         <div class="card-actions">
-          <button class="btn btn-secondary open-modal" data-modal="modal-f4">Plus d'infos</button>
-          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20Grand%20Tour%20Fès%20-%20Désert%20-%20Marrakech." target="_blank" rel="noopener noreferrer">Réserver</a>
+
+          <button
+            class="btn btn-secondary open-modal"
+            data-modal="modal-f4">
+            Plus d'infos
+          </button>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20Grand%20Tour%20Fès%20-%20Désert%20-%20Marrakech."
+            target="_blank"
+            rel="noopener noreferrer">
+            Réserver
+          </a>
+
         </div>
+
       </div>
+
     </article>
 
   </div>
 
-  <!-- CATEGORIE 3 : EXCURSIONS AU DEPART DE MARRAKECH -->
-  <h3 class="sub-section-title">🌴 Excursions dans le désert au départ de Marrakech</h3>
+
+  <!-- =====================================================
+       CATEGORIE 3 : MARRAKECH
+  ====================================================== -->
+
+  <h3 class="sub-section-title">
+    🌴 Excursions dans le désert au départ de Marrakech
+  </h3>
 
   <div class="cards">
 
     <article class="card">
+
       <img src="VALE.jpg" alt="Marrakech vers Merzouga Luxe">
+
       <div class="card-body">
+
         <span class="tag">3 JOURS / 2 NUITS</span>
+
         <h3>L'Évasion Saharienne Marrakech</h3>
-        <p>Traversée du Haut Atlas, Kasbah Aït Ben Haddou, Gorges du Dades et bivouac de luxe à Merzouga.</p>
-        <strong>Depuis 4 500 MAD / personne</strong>
+
+        <p>
+          Traversée du Haut Atlas, Kasbah Aït Ben Haddou,
+          Gorges du Dades et bivouac de luxe à Merzouga.
+        </p>
+
+        <strong>
+          Depuis 4 500 MAD / personne
+        </strong>
+
         <div class="card-actions">
-          <button class="btn btn-secondary open-modal" data-modal="modal-k1">Plus d'infos</button>
-          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20L'Évasion%20Saharienne%20au%20départ%20de%20Marrakech." target="_blank" rel="noopener noreferrer">Réserver</a>
+
+          <button
+            class="btn btn-secondary open-modal"
+            data-modal="modal-k1">
+            Plus d'infos
+          </button>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20L'Évasion%20Saharienne%20au%20départ%20de%20Marrakech."
+            target="_blank"
+            rel="noopener noreferrer">
+            Réserver
+          </a>
+
         </div>
+
       </div>
+
     </article>
 
+
     <article class="card">
+
       <img src="TOUDGHA.jpg" alt="Grand Tour Marrakech Merzouga Luxe">
+
       <div class="card-body">
+
         <span class="tag">4 JOURS / 3 NUITS</span>
+
         <h3>Privilège Saharien</h3>
-        <p>Un itinéraire détendu au départ de Marrakech. Explorez la Vallée du Draa, Ouarzazate et Erg Chebbi.</p>
-        <strong>Depuis 5 800 MAD / personne</strong>
+
+        <p>
+          Un itinéraire détendu au départ de Marrakech.
+          Explorez la Vallée du Draa, Ouarzazate et Erg Chebbi.
+        </p>
+
+        <strong>
+          Depuis 5 800 MAD / personne
+        </strong>
+
         <div class="card-actions">
-          <button class="btn btn-secondary open-modal" data-modal="modal-k2">Plus d'infos</button>
-          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Privilège%20Saharien%20au%20départ%20de%20Marrakech." target="_blank" rel="noopener noreferrer">Réserver</a>
+
+          <button
+            class="btn btn-secondary open-modal"
+            data-modal="modal-k2">
+            Plus d'infos
+          </button>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Privilège%20Saharien%20au%20départ%20de%20Marrakech."
+            target="_blank"
+            rel="noopener noreferrer">
+            Réserver
+          </a>
+
         </div>
+
       </div>
+
     </article>
 
+
     <article class="card">
+
       <img src="AZROU.jpg" alt="Marrakech à Fès via Merzouga">
+
       <div class="card-body">
+
         <span class="tag">3 JOURS / Marrakech vers Fès</span>
+
         <h3>Circuit Trans-Saharien</h3>
-        <p>Départ de Marrakech, nuit au campement de luxe à Merzouga, et dépose finale à Fès.</p>
-        <strong>Depuis 4 900 MAD / personne</strong>
+
+        <p>
+          Départ de Marrakech, nuit au campement de luxe à Merzouga,
+          et dépose finale à Fès.
+        </p>
+
+        <strong>
+          Depuis 4 900 MAD / personne
+        </strong>
+
         <div class="card-actions">
-          <button class="btn btn-secondary open-modal" data-modal="modal-k3">Plus d'infos</button>
-          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Trans-Saharien%20Marrakech-Désert-Fès." target="_blank" rel="noopener noreferrer">Réserver</a>
+
+          <button
+            class="btn btn-secondary open-modal"
+            data-modal="modal-k3">
+            Plus d'infos
+          </button>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Trans-Saharien%20Marrakech-Désert-Fès."
+            target="_blank"
+            rel="noopener noreferrer">
+            Réserver
+          </a>
+
         </div>
+
       </div>
+
     </article>
 
+
     <article class="card">
+
       <img src="AGAFAY.jpg" alt="Marrakech Désert d'Agafay Express">
+
       <div class="card-body">
+
         <span class="tag">2 JOURS / Désert d'Agafay</span>
+
         <h3>Luxe Express Agafay</h3>
-        <p>Une alternative proche de Marrakech : nuit sous les étoiles dans le désert d'Agafay au pied de l'Atlas.</p>
-        <strong>Depuis 2 800 MAD / personne</strong>
+
+        <p>
+          Une alternative proche de Marrakech : nuit sous les étoiles
+          dans le désert d'Agafay au pied de l'Atlas.
+        </p>
+
+        <strong>
+          Depuis 2 800 MAD / personne
+        </strong>
+
         <div class="card-actions">
-          <button class="btn btn-secondary open-modal" data-modal="modal-k4">Plus d'infos</button>
-          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Luxe%20Express%20Agafay." target="_blank" rel="noopener noreferrer">Réserver</a>
+
+          <button
+            class="btn btn-secondary open-modal"
+            data-modal="modal-k4">
+            Plus d'infos
+          </button>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20circuit%20Luxe%20Express%20Agafay."
+            target="_blank"
+            rel="noopener noreferrer">
+            Réserver
+          </a>
+
         </div>
+
       </div>
+
     </article>
 
   </div>
 
-  <!-- CATEGORIE 4 : EXCURSIONS AU DEPART DE CASABLANCA -->
-  <h3 class="sub-section-title">🏙️ Excursions dans le désert au départ de Casablanca</h3>
+
+  <!-- =====================================================
+       CATEGORIE 4 : CASABLANCA
+  ====================================================== -->
+
+  <h3 class="sub-section-title">
+    🏙️ Excursions dans le désert au départ de Casablanca
+  </h3>
 
   <div class="cards">
 
     <article class="card">
+
       <img src="CASABLANCA.jpg" alt="Casablanca vers le désert de Merzouga">
+
       <div class="card-body">
+
         <span class="tag">5 JOURS / 4 NUITS</span>
+
         <h3>Grand Circuit Imperial & Désert</h3>
-        <p>Départ de Casablanca, visite de Rabat, Fès, traversée du Moyen Atlas et séjour à Merzouga.</p>
-        <strong>Depuis 7 200 MAD / personne</strong>
+
+        <p>
+          Départ de Casablanca, visite de Rabat, Fès,
+          traversée du Moyen Atlas et séjour à Merzouga.
+        </p>
+
+        <strong>
+          Depuis 7 200 MAD / personne
+        </strong>
+
         <div class="card-actions">
-          <button class="btn btn-secondary open-modal" data-modal="modal-c1">Plus d'infos</button>
-          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20Grand%20Circuit%20Imperial%20%26%20Désert%20depuis%20Casablanca." target="_blank" rel="noopener noreferrer">Réserver</a>
+
+          <button
+            class="btn btn-secondary open-modal"
+            data-modal="modal-c1">
+            Plus d'infos
+          </button>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20Grand%20Circuit%20Imperial%20%26%20Désert%20depuis%20Casablanca."
+            target="_blank"
+            rel="noopener noreferrer">
+            Réserver
+          </a>
+
         </div>
+
       </div>
+
     </article>
 
+
     <article class="card">
+
       <img src="VOLIBILIS.jpg" alt="Casablanca Merzouga Marrakech Loop">
+
       <div class="card-body">
+
         <span class="tag">6 JOURS / 5 NUITS</span>
+
         <h3>La Grande Boucle Marocaine</h3>
-        <p>Itinéraire complet : Casablanca, Fès, dunes de Merzouga, Gorges du Dadès, Ouarzazate et Marrakech.</p>
-        <strong>Depuis 8 900 MAD / personne</strong>
+
+        <p>
+          Itinéraire complet : Casablanca, Fès, dunes de Merzouga,
+          Gorges du Dadès, Ouarzazate et Marrakech.
+        </p>
+
+        <strong>
+          Depuis 8 900 MAD / personne
+        </strong>
+
         <div class="card-actions">
-          <button class="btn btn-secondary open-modal" data-modal="modal-c2">Plus d'infos</button>
-          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20La%20Grande%20Boucle%20Marocaine%20depuis%20Casablanca." target="_blank" rel="noopener noreferrer">Réserver</a>
+
+          <button
+            class="btn btn-secondary open-modal"
+            data-modal="modal-c2">
+            Plus d'infos
+          </button>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20La%20Grande%20Boucle%20Marocaine%20depuis%20Casablanca."
+            target="_blank"
+            rel="noopener noreferrer">
+            Réserver
+          </a>
+
         </div>
+
       </div>
+
     </article>
 
+
     <article class="card">
+
       <img src="RABAT.jpg" alt="Casablanca Express Désert">
+
       <div class="card-body">
+
         <span class="tag">4 JOURS / 3 NUITS</span>
+
         <h3>Casablanca Express Sahara</h3>
-        <p>Un trajet direct vers les dunes d'Erg Chebbi via Beni Mellal et Errachidia pour optimiser votre temps.</p>
-        <strong>Depuis 5 900 MAD / personne</strong>
+
+        <p>
+          Un trajet direct vers les dunes d'Erg Chebbi via Beni Mellal
+          et Errachidia pour optimiser votre temps.
+        </p>
+
+        <strong>
+          Depuis 5 900 MAD / personne
+        </strong>
+
         <div class="card-actions">
-          <button class="btn btn-secondary open-modal" data-modal="modal-c3">Plus d'infos</button>
-          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20Casablanca%20Express%20Sahara." target="_blank" rel="noopener noreferrer">Réserver</a>
+
+          <button
+            class="btn btn-secondary open-modal"
+            data-modal="modal-c3">
+            Plus d'infos
+          </button>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20suis%20intéressé%20par%20le%20Casablanca%20Express%20Sahara."
+            target="_blank"
+            rel="noopener noreferrer">
+            Réserver
+          </a>
+
         </div>
+
       </div>
+
     </article>
 
+
     <article class="card">
+
       <img src="montgolfière.jpg" alt="Casablanca Désert VIP">
+
       <div class="card-body">
+
         <span class="tag">SUR MESURE</span>
+
         <h3>Casablanca VIP Désert Tour</h3>
-        <p>Circuit privatif sur mesure au départ de l'aéroport ou de votre hôtel à Casablanca avec chauffeur dédié.</p>
+
+        <p>
+          Circuit privatif sur mesure au départ de l'aéroport
+          ou de votre hôtel à Casablanca avec chauffeur dédié.
+        </p>
+
         <strong>Sur demande</strong>
+
         <div class="card-actions">
-          <button class="btn btn-secondary open-modal" data-modal="modal-c4">Plus d'infos</button>
-          <a class="btn btn-primary" href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20souhaite%20un%20devis%20pour%20le%20Casablanca%20VIP%20Désert%20Tour." target="_blank" rel="noopener noreferrer">Devis</a>
+
+          <button
+            class="btn btn-secondary open-modal"
+            data-modal="modal-c4">
+            Plus d'infos
+          </button>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20souhaite%20un%20devis%20pour%20le%20Casablanca%20VIP%20Désert%20Tour."
+            target="_blank"
+            rel="noopener noreferrer">
+            Devis
+          </a>
+
         </div>
+
       </div>
+
     </article>
 
   </div>
 
 </section>
 
+
 <!-- =====================================================
-     FENÊTRES MODALES (DÉTAILS DES CIRCUITS)
+     FENÊTRES MODALES
 ===================================================== -->
 
-<!-- Modales Merzouga -->
 <div id="modal-m1" class="modal">
+
   <div class="modal-content">
+
     <button class="modal-close">&times;</button>
+
     <h2>Merzouga Express (2J / 1N)</h2>
+
     <div class="modal-body">
+
       <strong>Programme détaillé :</strong>
+
       <ul>
-        <li><strong>Jour 1 :</strong> Départ l'après-midi à dos de dromadaire. Traversée des dunes de l'Erg Chebbi, observation du coucher de soleil. Dîner traditionnel et soirée musique berbère autour du feu. Nuit sous tente luxe.</li>
-        <li><strong>Jour 2 :</strong> Lever du soleil dans les dunes, petit-déjeuner traditionnel, retour en dromadaire ou 4x4.</li>
+
+        <li>
+          <strong>Jour 1 :</strong>
+          Départ l'après-midi à dos de dromadaire.
+          Traversée des dunes de l'Erg Chebbi,
+          observation du coucher de soleil.
+          Dîner traditionnel et soirée musique berbère autour du feu.
+          Nuit sous tente luxe.
+        </li>
+
+        <li>
+          <strong>Jour 2 :</strong>
+          Lever du soleil dans les dunes,
+          petit-déjeuner traditionnel,
+          retour en dromadaire ou 4x4.
+        </li>
+
       </ul>
+
       <strong>Inclus :</strong>
-      <p>Dromadaire, guide local, dîner, petit-déjeuner, hébergement en bivouac luxe.</p>
+
+      <p>
+        Dromadaire, guide local, dîner,
+        petit-déjeuner, hébergement en bivouac luxe.
+      </p>
+
     </div>
+
   </div>
+
 </div>
+
 
 <div id="modal-m2" class="modal">
+
   <div class="modal-content">
+
     <button class="modal-close">&times;</button>
+
     <h2>Expérience Sahara (3J / 2N)</h2>
+
     <div class="modal-body">
+
       <strong>Programme détaillé :</strong>
+
       <ul>
-        <li><strong>Jour 1 :</strong> Accueil, trek en dromadaire et installation au campement. Dîner et nuit étoilée.</li>
-        <li><strong>Jour 2 :</strong> Journée en 4x4 à la découverte des nomades, des mines désertes et du village Gnawa de Khamlia. Deuxième nuit au bivouac.</li>
-        <li><strong>Jour 3 :</strong> Lever de soleil sur les plus hautes dunes, petit-déjeuner et fin de la prestation.</li>
+
+        <li>
+          <strong>Jour 1 :</strong>
+          Accueil, trek en dromadaire et installation au campement.
+          Dîner et nuit étoilée.
+        </li>
+
+        <li>
+          <strong>Jour 2 :</strong>
+          Journée en 4x4 à la découverte des nomades,
+          des mines désertes et du village Gnawa de Khamlia.
+          Deuxième nuit au bivouac.
+        </li>
+
+        <li>
+          <strong>Jour 3 :</strong>
+          Lever de soleil sur les plus hautes dunes,
+          petit-déjeuner et fin de la prestation.
+        </li>
+
       </ul>
+
       <strong>Inclus :</strong>
-      <p>Pension complète, excursions 4x4, visites culturelles, guide privé.</p>
+
+      <p>
+        Pension complète, excursions 4x4,
+        visites culturelles, guide privé.
+      </p>
+
     </div>
+
   </div>
+
 </div>
+
 
 <div id="modal-m3" class="modal">
+
   <div class="modal-content">
+
     <button class="modal-close">&times;</button>
+
     <h2>Aventure 4×4 (4J / 3N)</h2>
+
     <div class="modal-body">
+
       <strong>Programme détaillé :</strong>
+
       <ul>
-        <li><strong>Jour 1-2 :</strong> Traversée des pistes du Paris-Dakar, visite des oasiens, gravures rupestres et nuit en tente nomade.</li>
-        <li><strong>Jour 3-4 :</strong> Exploration approfondie de l'Erg Chebbi, sandboarding, rencontre avec les artisans locaux et dîner gastronomique.</li>
+
+        <li>
+          <strong>Jour 1-2 :</strong>
+          Traversée des pistes du Paris-Dakar,
+          visite des oasiens, gravures rupestres
+          et nuit en tente nomade.
+        </li>
+
+        <li>
+          <strong>Jour 3-4 :</strong>
+          Exploration approfondie de l'Erg Chebbi,
+          sandboarding, rencontre avec les artisans locaux
+          et dîner gastronomique.
+        </li>
+
       </ul>
+
       <strong>Inclus :</strong>
-      <p>Chauffeur/Guide privé 4x4, carburant, repas, activités de glisse sur sable.</p>
+
+      <p>
+        Chauffeur/Guide privé 4x4, carburant,
+        repas, activités de glisse sur sable.
+      </p>
+
     </div>
+
   </div>
+
 </div>
+
 
 <div id="modal-m4" class="modal">
+
   <div class="modal-content">
+
     <button class="modal-close">&times;</button>
+
     <h2>Séjour privé sur mesure</h2>
+
     <div class="modal-body">
-      <p>Concevez une aventure personnalisée selon vos critères :</p>
+
+      <p>
+        Concevez une aventure personnalisée selon vos critères :
+      </p>
+
       <ul>
-        <li>Transferts privatifs depuis Marrakech, Fès ou Ouarzazate.</li>
-        <li>Hébergement de haut standing (Bivouac VIP / Kasbah).</li>
-        <li>Activités au choix : Quad, Buggy, Survol en montgolfière, Astronomie guidée.</li>
+
+        <li>
+          Transferts privatifs depuis Marrakech,
+          Fès ou Ouarzazate.
+        </li>
+
+        <li>
+          Hébergement de haut standing
+          (Bivouac VIP / Kasbah).
+        </li>
+
+        <li>
+          Activités au choix :
+          Quad, Buggy, Survol en montgolfière,
+          Astronomie guidée.
+        </li>
+
       </ul>
-      <p>Contactez-nous directement par téléphone ou WhatsApp pour construire votre itinéraire.</p>
+
+      <p>
+        Contactez-nous directement par téléphone
+        ou WhatsApp pour construire votre itinéraire.
+      </p>
+
     </div>
+
   </div>
+
 </div>
 
-<!-- Modales Fès -->
+
+<!-- =====================================================
+     MODALES FÈS
+===================================================== -->
+
 <div id="modal-f1" class="modal">
+
   <div class="modal-content">
+
     <button class="modal-close">&times;</button>
+
     <h2>Le magnifique Sahara (4 Jours / Départ de Fès)</h2>
+
     <div class="modal-body">
+
       <strong>Description :</strong>
-      <p>Une immersion totale de luxe au départ de Fès à destination du désert d'Erg Chebbi.</p>
+
+      <p>
+        Une immersion totale de luxe au départ de Fès
+        à destination du désert d'Erg Chebbi.
+      </p>
+
       <strong>Programme synthétique :</strong>
+
       <ul>
-        <li><strong>Jour 1 :</strong> Départ de Fès, traversée du Moyen Atlas, Ifrane, forêt de cèdres d'Azrou, vallée du Ziz, arrivée à Merzouga. Nuit en hôtel/Kasbah de charme.</li>
-        <li><strong>Jour 2 :</strong> Excursion 4x4 dans le désert, visite du village de Khamlia, puis caravane de dromadaires vers le campement de luxe Glamping.</li>
-        <li><strong>Jour 3 :</strong> Journée de relaxation dans les dunes, sandboarding, coucher de soleil et astronomie. Deuxième nuit au campement de luxe.</li>
-        <li><strong>Jour 4 :</strong> Petit-déjeuner saharien et trajet de retour confort vers Fès.</li>
+
+        <li>
+          <strong>Jour 1 :</strong>
+          Départ de Fès, traversée du Moyen Atlas,
+          Ifrane, forêt de cèdres d'Azrou,
+          vallée du Ziz, arrivée à Merzouga.
+          Nuit en hôtel/Kasbah de charme.
+        </li>
+
+        <li>
+          <strong>Jour 2 :</strong>
+          Excursion 4x4 dans le désert,
+          visite du village de Khamlia,
+          puis caravane de dromadaires
+          vers le campement de luxe Glamping.
+        </li>
+
+        <li>
+          <strong>Jour 3 :</strong>
+          Journée de relaxation dans les dunes,
+          sandboarding, coucher de soleil et astronomie.
+          Deuxième nuit au campement de luxe.
+        </li>
+
+        <li>
+          <strong>Jour 4 :</strong>
+          Petit-déjeuner saharien et trajet
+          de retour confort vers Fès.
+        </li>
+
       </ul>
-      <strong>Prix :</strong> À partir de 5 550 MAD / personne.
+
+      <strong>Prix :</strong>
+      À partir de 5 550 MAD / personne.
+
     </div>
+
   </div>
+
 </div>
+
 
 <div id="modal-f2" class="modal">
+
   <div class="modal-content">
+
     <button class="modal-close">&times;</button>
+
     <h2>Un soupçon de Sahara (3 Jours / Départ de Fès)</h2>
+
     <div class="modal-body">
+
       <strong>Description :</strong>
-      <p>Un itinéraire idéal de 3 jours pour découvrir l'essentiel du Sahara sans se presser.</p>
+
+      <p>
+        Un itinéraire idéal de 3 jours pour découvrir
+        l'essentiel du Sahara sans se presser.
+      </p>
+
       <strong>Programme synthétique :</strong>
+
       <ul>
-        <li><strong>Jour 1 :</strong> Fès - Ifrane - Erfoud - Merzouga. Balade en dromadaire au coucher du soleil et nuit en bivouac luxe.</li>
-        <li><strong>Jour 2 :</strong> Réveil aux aurores, exploration des dunes, rencontre avec les nomades locaux et soirée festive au campement.</li>
-        <li><strong>Jour 3 :</strong> Petit-déjeuner et voyage de retour vers Fès à travers les montagnes de l'Atlas.</li>
+
+        <li>
+          <strong>Jour 1 :</strong>
+          Fès - Ifrane - Erfoud - Merzouga.
+          Balade en dromadaire au coucher du soleil
+          et nuit en bivouac luxe.
+        </li>
+
+        <li>
+          <strong>Jour 2 :</strong>
+          Réveil aux aurores, exploration des dunes,
+          rencontre avec les nomades locaux
+          et soirée festive au campement.
+        </li>
+
+        <li>
+          <strong>Jour 3 :</strong>
+          Petit-déjeuner et voyage de retour vers Fès
+          à travers les montagnes de l'Atlas.
+        </li>
+
       </ul>
-      <strong>Prix :</strong> À partir de 4 350 MAD / personne.
+
+      <strong>Prix :</strong>
+      À partir de 4 350 MAD / personne.
+
     </div>
+
   </div>
+
 </div>
+
 
 <div id="modal-f3" class="modal">
+
   <div class="modal-content">
+
     <button class="modal-close">&times;</button>
+
     <h2>Aventure dans le désert (3 Jours / Départ de Fès)</h2>
+
     <div class="modal-body">
+
       <strong>Description :</strong>
-      <p>Aventure dynamique incluant 2 nuits complètes au cœur des dunes de l'Erg Chebbi.</p>
+
+      <p>
+        Aventure dynamique incluant 2 nuits complètes
+        au cœur des dunes de l'Erg Chebbi.
+      </p>
+
       <strong>Programme synthétique :</strong>
+
       <ul>
-        <li><strong>Jour 1 :</strong> Trajet panoramique Fès - Merzouga. Arrivée directe au campement de luxe pour la première nuit.</li>
-        <li><strong>Jour 2 :</strong> Journée complète d'aventure : circuit 4x4, quad/buggy (en option), musique traditionnelle et deuxième nuit sous les étoiles.</li>
-        <li><strong>Jour 3 :</strong> Petit-déjeuner et transfert de retour à Fès.</li>
+
+        <li>
+          <strong>Jour 1 :</strong>
+          Trajet panoramique Fès - Merzouga.
+          Arrivée directe au campement de luxe
+          pour la première nuit.
+        </li>
+
+        <li>
+          <strong>Jour 2 :</strong>
+          Journée complète d'aventure :
+          circuit 4x4, quad/buggy (en option),
+          musique traditionnelle et deuxième nuit
+          sous les étoiles.
+        </li>
+
+        <li>
+          <strong>Jour 3 :</strong>
+          Petit-déjeuner et transfert de retour à Fès.
+        </li>
+
       </ul>
-      <strong>Prix :</strong> À partir de 4 800 MAD / personne.
+
+      <strong>Prix :</strong>
+      À partir de 4 800 MAD / personne.
+
     </div>
+
   </div>
+
 </div>
+
 
 <div id="modal-f4" class="modal">
+
   <div class="modal-content">
+
     <button class="modal-close">&times;</button>
+
     <h2>Grand Tour Fès - Désert - Marrakech (4 Jours)</h2>
+
     <div class="modal-body">
+
       <strong>Description :</strong>
-      <p>Un itinéraire exceptionnel qui relie la capitale spirituelle (Fès) à la ville ocre (Marrakech) en passant par le Sahara.</p>
+
+      <p>
+        Un itinéraire exceptionnel qui relie la capitale spirituelle
+        (Fès) à la ville ocre (Marrakech) en passant par le Sahara.
+      </p>
+
       <strong>Programme synthétique :</strong>
+
       <ul>
-        <li><strong>Jour 1 :</strong> Fès - Azrou - Vallée du Ziz - Nuit à Merzouga (Campement Luxe).</li>
-        <li><strong>Jour 2 :</strong> Exploration du désert, trek en dromadaire et deuxième nuit dans le désert.</li>
-        <li><strong>Jour 3 :</strong> Merzouga - Gorges du Todra - Vallée du Dadès. Nuit en hôtel de luxe dans les gorges.</li>
-        <li><strong>Jour 4 :</strong> Ouarzazate - Aït Ben Haddou - Col du Tizi n'Tichka - Arrivée à Marrakech.</li>
+
+        <li>
+          <strong>Jour 1 :</strong>
+          Fès - Azrou - Vallée du Ziz -
+          Nuit à Merzouga (Campement Luxe).
+        </li>
+
+        <li>
+          <strong>Jour 2 :</strong>
+          Exploration du désert,
+          trek en dromadaire et deuxième nuit dans le désert.
+        </li>
+
+        <li>
+          <strong>Jour 3 :</strong>
+          Merzouga - Gorges du Todra -
+          Vallée du Dadès.
+          Nuit en hôtel de luxe dans les gorges.
+        </li>
+
+        <li>
+          <strong>Jour 4 :</strong>
+          Ouarzazate - Aït Ben Haddou -
+          Col du Tizi n'Tichka -
+          Arrivée à Marrakech.
+        </li>
+
       </ul>
-      <strong>Prix :</strong> À partir de 6 200 MAD / personne.
+
+      <strong>Prix :</strong>
+      À partir de 6 200 MAD / personne.
+
     </div>
+
   </div>
+
 </div>
 
-<!-- Modales Marrakech -->
+
+<!-- =====================================================
+     MODALES MARRAKECH
+===================================================== -->
+
 <div id="modal-k1" class="modal">
+
   <div class="modal-content">
+
     <button class="modal-close">&times;</button>
+
     <h2>L'Évasion Saharienne (3 Jours / Départ de Marrakech)</h2>
+
     <div class="modal-body">
+
       <strong>Description :</strong>
-      <p>Le circuit incontournable traversant le Haut Atlas pour rejoindre les immenses dunes de Merzouga.</p>
+
+      <p>
+        Le circuit incontournable traversant le Haut Atlas
+        pour rejoindre les immenses dunes de Merzouga.
+      </p>
+
       <strong>Programme synthétique :</strong>
+
       <ul>
-        <li><strong>Jour 1 :</strong> Marrakech - Tizi n'Tichka - Kasbah Aït Ben Haddou - Ouarzazate - Vallée du Dadès (Nuit en hôtel de charme).</li>
-        <li><strong>Jour 2 :</strong> Vallée du Dadès - Gorges du Todra - Erfoud - Merzouga. Balade en dromadaire et nuit au campement de luxe.</li>
-        <li><strong>Jour 3 :</strong> Réveil au lever du soleil, petit-déjeuner et voyage de retour direct vers Marrakech.</li>
+
+        <li>
+          <strong>Jour 1 :</strong>
+          Marrakech - Tizi n'Tichka -
+          Kasbah Aït Ben Haddou - Ouarzazate -
+          Vallée du Dadès
+          (Nuit en hôtel de charme).
+        </li>
+
+        <li>
+          <strong>Jour 2 :</strong>
+          Vallée du Dadès - Gorges du Todra -
+          Erfoud - Merzouga.
+          Balade en dromadaire et nuit au campement de luxe.
+        </li>
+
+        <li>
+          <strong>Jour 3 :</strong>
+          Réveil au lever du soleil,
+          petit-déjeuner et voyage de retour direct vers Marrakech.
+        </li>
+
       </ul>
-      <strong>Prix :</strong> À partir de 4 500 MAD / personne.
+
+      <strong>Prix :</strong>
+      À partir de 4 500 MAD / personne.
+
     </div>
+
   </div>
+
 </div>
+
 
 <div id="modal-k2" class="modal">
+
   <div class="modal-content">
+
     <button class="modal-close">&times;</button>
+
     <h2>Privilège Saharien (4 Jours / Départ de Marrakech)</h2>
+
     <div class="modal-body">
+
       <strong>Description :</strong>
-      <p>Prenez le temps d'explorer le Grand Sud marocain à un rythme modéré avec nuitées haut de gamme.</p>
+
+      <p>
+        Prenez le temps d'explorer le Grand Sud marocain
+        à un rythme modéré avec nuitées haut de gamme.
+      </p>
+
       <strong>Programme synthétique :</strong>
+
       <ul>
-        <li><strong>Jour 1 :</strong> Marrakech - Kasbah Telouet - Aït Ben Haddou - Ouarzazate.</li>
-        <li><strong>Jour 2 :</strong> Ouarzazate - Vallée du Draa - Agdz - Rissani - Merzouga (Campement de luxe).</li>
-        <li><strong>Jour 3 :</strong> Journée complète d'exploration dans les dunes en 4x4, rencontre avec les nomades et 2ème nuit au campement.</li>
-        <li><strong>Jour 4 :</strong> Merzouga - Gorges du Todra - Col du Tizi n'Tichka - Arrivée à Marrakech en fin de journée.</li>
+
+        <li>
+          <strong>Jour 1 :</strong>
+          Marrakech - Kasbah Telouet -
+          Aït Ben Haddou - Ouarzazate.
+        </li>
+
+        <li>
+          <strong>Jour 2 :</strong>
+          Ouarzazate - Vallée du Draa -
+          Agdz - Rissani - Merzouga
+          (Campement de luxe).
+        </li>
+
+        <li>
+          <strong>Jour 3 :</strong>
+          Journée complète d'exploration dans les dunes en 4x4,
+          rencontre avec les nomades et 2ème nuit au campement.
+        </li>
+
+        <li>
+          <strong>Jour 4 :</strong>
+          Merzouga - Gorges du Todra -
+          Col du Tizi n'Tichka -
+          Arrivée à Marrakech en fin de journée.
+        </li>
+
       </ul>
-      <strong>Prix :</strong> À partir de 5 800 MAD / personne.
+
+      <strong>Prix :</strong>
+      À partir de 5 800 MAD / personne.
+
     </div>
+
   </div>
+
 </div>
+
 
 <div id="modal-k3" class="modal">
+
   <div class="modal-content">
+
     <button class="modal-close">&times;</button>
+
     <h2>Circuit Trans-Saharien (3 Jours / Marrakech vers Fès)</h2>
+
     <div class="modal-body">
+
       <strong>Description :</strong>
-      <p>Une traverse idéale si vous souhaitez poursuivre votre voyage à Fès sans repasser par Marrakech.</p>
+
+      <p>
+        Une traverse idéale si vous souhaitez poursuivre
+        votre voyage à Fès sans repasser par Marrakech.
+      </p>
+
       <strong>Programme synthétique :</strong>
+
       <ul>
-        <li><strong>Jour 1 :</strong> Marrakech - Kasbah Aït Ben Haddou - Gorges du Dadès.</li>
-        <li><strong>Jour 2 :</strong> Gorges du Dadès - Gorges du Todra - Merzouga. Coucher de soleil en dromadaire et nuit sous les étoiles.</li>
-        <li><strong>Jour 3 :</strong> Merzouga - Vallée du Ziz - Forêt de cèdres d'Azrou - Ifrane - Arrivée à Fès.</li>
+
+        <li>
+          <strong>Jour 1 :</strong>
+          Marrakech - Kasbah Aït Ben Haddou -
+          Gorges du Dadès.
+        </li>
+
+        <li>
+          <strong>Jour 2 :</strong>
+          Gorges du Dadès - Gorges du Todra -
+          Merzouga.
+          Coucher de soleil en dromadaire et nuit sous les étoiles.
+        </li>
+
+        <li>
+          <strong>Jour 3 :</strong>
+          Merzouga - Vallée du Ziz -
+          Forêt de cèdres d'Azrou -
+          Ifrane - Arrivée à Fès.
+        </li>
+
       </ul>
-      <strong>Prix :</strong> À partir de 4 900 MAD / personne.
+
+      <strong>Prix :</strong>
+      À partir de 4 900 MAD / personne.
+
     </div>
+
   </div>
+
 </div>
+
 
 <div id="modal-k4" class="modal">
+
   <div class="modal-content">
+
     <button class="modal-close">&times;</button>
+
     <h2>Luxe Express Agafay (2 Jours / Départ de Marrakech)</h2>
+
     <div class="modal-body">
+
       <strong>Description :</strong>
-      <p>Une alternative parfaite si vous disposez de peu de temps : le désert de pierre d'Agafay à 45 min de Marrakech.</p>
+
+      <p>
+        Une alternative parfaite si vous disposez de peu de temps :
+        le désert de pierre d'Agafay à 45 min de Marrakech.
+      </p>
+
       <strong>Programme synthétique :</strong>
+
       <ul>
-        <li><strong>Jour 1 :</strong> Départ l'après-midi de Marrakech, balade en quad ou dromadaire au coucher du soleil, dîner spectacle berbère et nuit en tente de luxe.</li>
-        <li><strong>Jour 2 :</strong> Petit-déjeuner face aux montagnes de l'Atlas, matinée détente au bord de la piscine du camp et retour à Marrakech.</li>
+
+        <li>
+          <strong>Jour 1 :</strong>
+          Départ l'après-midi de Marrakech,
+          balade en quad ou dromadaire au coucher du soleil,
+          dîner spectacle berbère et nuit en tente de luxe.
+        </li>
+
+        <li>
+          <strong>Jour 2 :</strong>
+          Petit-déjeuner face aux montagnes de l'Atlas,
+          matinée détente au bord de la piscine du camp
+          et retour à Marrakech.
+        </li>
+
       </ul>
-      <strong>Prix :</strong> À partir de 2 800 MAD / personne.
+
+      <strong>Prix :</strong>
+      À partir de 2 800 MAD / personne.
+
     </div>
+
   </div>
+
 </div>
 
-<!-- Modales Casablanca -->
+
+<!-- =====================================================
+     MODALES CASABLANCA
+===================================================== -->
+
 <div id="modal-c1" class="modal">
+
   <div class="modal-content">
+
     <button class="modal-close">&times;</button>
+
     <h2>Grand Circuit Imperial & Désert (5 Jours / Départ de Casablanca)</h2>
+
     <div class="modal-body">
+
       <strong>Description :</strong>
-      <p>Combinez l'histoire des villes impériales et la magie des grandes dunes de Merzouga au départ de Casablanca.</p>
+
+      <p>
+        Combinez l'histoire des villes impériales
+        et la magie des grandes dunes de Merzouga
+        au départ de Casablanca.
+      </p>
+
       <strong>Programme synthétique :</strong>
+
       <ul>
-        <li><strong>Jour 1 :</strong> Casablanca - Visite de la Grande Mosquée Hassan II - Rabat - Fès (Nuit en Riad).</li>
-        <li><strong>Jour 2 :</strong> Fès - Ifrane - Azrou - Vallée du Ziz - Merzouga (Arrivée au campement de luxe).</li>
-        <li><strong>Jour 3 :</strong> Journée saharienne : tour des dunes en 4x4, musique Gnawa, dromadaire et coucher de soleil.</li>
-        <li><strong>Jour 4 :</strong> Merzouga - Gorges du Todra - Vallée du Dadès - Ouarzazate.</li>
-        <li><strong>Jour 5 :</strong> Ouarzazate - Aït Ben Haddou - Marrakech - Retour à Casablanca.</li>
+
+        <li>
+          <strong>Jour 1 :</strong>
+          Casablanca - Visite de la Grande Mosquée Hassan II -
+          Rabat - Fès (Nuit en Riad).
+        </li>
+
+        <li>
+          <strong>Jour 2 :</strong>
+          Fès - Ifrane - Azrou -
+          Vallée du Ziz - Merzouga
+          (Arrivée au campement de luxe).
+        </li>
+
+        <li>
+          <strong>Jour 3 :</strong>
+          Journée saharienne :
+          tour des dunes en 4x4, musique Gnawa,
+          dromadaire et coucher de soleil.
+        </li>
+
+        <li>
+          <strong>Jour 4 :</strong>
+          Merzouga - Gorges du Todra -
+          Vallée du Dadès - Ouarzazate.
+        </li>
+
+        <li>
+          <strong>Jour 5 :</strong>
+          Ouarzazate - Aït Ben Haddou -
+          Marrakech - Retour à Casablanca.
+        </li>
+
       </ul>
-      <strong>Prix :</strong> À partir de 7 200 MAD / personne.
+
+      <strong>Prix :</strong>
+      À partir de 7 200 MAD / personne.
+
     </div>
+
   </div>
+
 </div>
+
 
 <div id="modal-c2" class="modal">
+
   <div class="modal-content">
+
     <button class="modal-close">&times;</button>
+
     <h2>La Grande Boucle Marocaine (6 Jours / Départ de Casablanca)</h2>
+
     <div class="modal-body">
+
       <strong>Description :</strong>
-      <p>Le tour complet ultime du Maroc reliant côte atlantique, villes impériales, désert du Sahara et Atlas.</p>
+
+      <p>
+        Le tour complet ultime du Maroc reliant côte atlantique,
+        villes impériales, désert du Sahara et Atlas.
+      </p>
+
       <strong>Programme synthétique :</strong>
+
       <ul>
-        <li><strong>Jour 1 :</strong> Prise en charge à Casablanca - Transfert vers Fès via Meknès et Volubilis.</li>
-        <li><strong>Jour 2 :</strong> Visite guidée de Fès le matin - Trajet vers Midelt / Erfoud.</li>
-        <li><strong>Jour 3 :</strong> Erfoud - Merzouga. Excursion dunes, dromadaire et nuit sous tente de luxe à Erg Chebbi.</li>
-        <li><strong>Jour 4 :</strong> Merzouga - Gorges du Todra - Vallée des Roses - Boumalne Dadès.</li>
-        <li><strong>Jour 5 :</strong> Dadès - Ouarzazate - Kasbah Aït Ben Haddou - Col Tichka - Marrakech.</li>
-        <li><strong>Jour 6 :</strong> Visite libre de Marrakech le matin et retour confort vers Casablanca l'après-midi.</li>
+
+        <li>
+          <strong>Jour 1 :</strong>
+          Prise en charge à Casablanca -
+          Transfert vers Fès via Meknès et Volubilis.
+        </li>
+
+        <li>
+          <strong>Jour 2 :</strong>
+          Visite guidée de Fès le matin -
+          Trajet vers Midelt / Erfoud.
+        </li>
+
+        <li>
+          <strong>Jour 3 :</strong>
+          Erfoud - Merzouga.
+          Excursion dunes, dromadaire et nuit
+          sous tente de luxe à Erg Chebbi.
+        </li>
+
+        <li>
+          <strong>Jour 4 :</strong>
+          Merzouga - Gorges du Todra -
+          Vallée des Roses - Boumalne Dadès.
+        </li>
+
+        <li>
+          <strong>Jour 5 :</strong>
+          Dadès - Ouarzazate -
+          Kasbah Aït Ben Haddou -
+          Col Tichka - Marrakech.
+        </li>
+
+        <li>
+          <strong>Jour 6 :</strong>
+          Visite libre de Marrakech le matin
+          et retour confort vers Casablanca l'après-midi.
+        </li>
+
       </ul>
-      <strong>Prix :</strong> À partir de 8 900 MAD / personne.
+
+      <strong>Prix :</strong>
+      À partir de 8 900 MAD / personne.
+
     </div>
+
   </div>
+
 </div>
+
 
 <div id="modal-c3" class="modal">
+
   <div class="modal-content">
+
     <button class="modal-close">&times;</button>
+
     <h2>Casablanca Express Sahara (4 Jours)</h2>
+
     <div class="modal-body">
+
       <strong>Description :</strong>
-      <p>Un itinéraire direct et optimisé pour atteindre le désert de Merzouga au départ de la capitale économique.</p>
+
+      <p>
+        Un itinéraire direct et optimisé pour atteindre
+        le désert de Merzouga au départ de la capitale économique.
+      </p>
+
       <strong>Programme synthétique :</strong>
+
       <ul>
-        <li><strong>Jour 1 :</strong> Casablanca - Beni Mellal - Erfoud - Merzouga (Nuit en hôtel de charme au pied des dunes).</li>
-        <li><strong>Jour 2 :</strong> Journée désert : circuit 4x4, quad (optionnel), méharée en dromadaire et nuit en bivouac luxe.</li>
-        <li><strong>Jour 3 :</strong> Merzouga - Errachidia - Midelt - Ifrane (Nuit à Ifrane ou Fès).</li>
-        <li><strong>Jour 4 :</strong> Retour vers Casablanca avec arrêt panoramique à Rabat.</li>
+
+        <li>
+          <strong>Jour 1 :</strong>
+          Casablanca - Beni Mellal - Erfoud -
+          Merzouga
+          (Nuit en hôtel de charme au pied des dunes).
+        </li>
+
+        <li>
+          <strong>Jour 2 :</strong>
+          Journée désert :
+          circuit 4x4, quad (optionnel),
+          méharée en dromadaire et nuit en bivouac luxe.
+        </li>
+
+        <li>
+          <strong>Jour 3 :</strong>
+          Merzouga - Errachidia - Midelt -
+          Ifrane (Nuit à Ifrane ou Fès).
+        </li>
+
+        <li>
+          <strong>Jour 4 :</strong>
+          Retour vers Casablanca
+          avec arrêt panoramique à Rabat.
+        </li>
+
       </ul>
-      <strong>Prix :</strong> À partir de 5 900 MAD / personne.
+
+      <strong>Prix :</strong>
+      À partir de 5 900 MAD / personne.
+
     </div>
+
   </div>
+
 </div>
+
 
 <div id="modal-c4" class="modal">
+
   <div class="modal-content">
+
     <button class="modal-close">&times;</button>
+
     <h2>Casablanca VIP Désert Tour (Sur Mesure)</h2>
+
     <div class="modal-body">
-      <p>Une formule haut de gamme conçue sur mesure pour les voyageurs exigeants :</p>
+
+      <p>
+        Une formule haut de gamme conçue sur mesure
+        pour les voyageurs exigeants :
+      </p>
+
       <ul>
-        <li>Prise en charge personnalisée à l'Aéroport Mohammed V (CMN) ou à votre hôtel.</li>
-        <li>Véhicule 4x4 de luxe ou Minivan VIP avec chauffeur bilingue dédié.</li>
-        <li>Hébergements 5 étoiles, Riads de prestige et Bivouac VIP exclusif dans le désert.</li>
-        <li>Options d'activités : vol en hélicoptère/montgolfière, repas gastronomiques privatisés.</li>
+
+        <li>
+          Prise en charge personnalisée à l'Aéroport Mohammed V
+          (CMN) ou à votre hôtel.
+        </li>
+
+        <li>
+          Véhicule 4x4 de luxe ou Minivan VIP
+          avec chauffeur bilingue dédié.
+        </li>
+
+        <li>
+          Hébergements 5 étoiles,
+          Riads de prestige et Bivouac VIP exclusif dans le désert.
+        </li>
+
+        <li>
+          Options d'activités :
+          vol en hélicoptère/montgolfière,
+          repas gastronomiques privatisés.
+        </li>
+
       </ul>
-      <p>Contactez notre équipe pour composer votre itinéraire personnalisé.</p>
+
+      <p>
+        Contactez notre équipe pour composer
+        votre itinéraire personnalisé.
+      </p>
+
     </div>
+
   </div>
+
 </div>
 
-<!-- À PROPOS -->
+
+<!-- =====================================================
+     À PROPOS
+===================================================== -->
+
 <section id="apropos" class="about section">
+
   <div class="about-image">
-    <img src="https://images.unsplash.com/photo-1489493887464-892be6d1daae?auto=format&fit=crop&w=1200&q=85" alt="Paysage du sud marocain">
+
+    <img
+      src="https://images.unsplash.com/photo-1489493887464-892be6d1daae?auto=format&fit=crop&w=1200&q=85"
+      alt="Paysage du sud marocain">
+
   </div>
+
   <div class="about-text">
-    <p class="eyebrow dark">POURQUOI NOUS CHOISIR ?</p>
+
+    <p class="eyebrow dark">
+      POURQUOI NOUS CHOISIR ?
+    </p>
+
     <h2>Le désert vous attend...</h2>
+
     <p>
       Merzouga Luxury Desert vous accompagne pour découvrir
       les dunes de l'Erg Chebbi et la richesse du Sud marocain
       à travers des expériences authentiques et soigneusement organisées.
     </p>
+
     <ul>
       <li>Des paysages à couper le souffle</li>
       <li>Une gastronomie locale savoureuse</li>
       <li>Une immersion dans la culture berbère</li>
       <li>Une équipe locale passionnée et disponible</li>
     </ul>
-    <a href="/#contact" class="btn btn-primary">Préparer mon voyage →</a>
+
+    <a href="/#contact" class="btn btn-primary">
+      Préparer mon voyage →
+    </a>
+
   </div>
+
 </section>
 
-<!-- GALERIE -->
+
+<!-- =====================================================
+     GALERIE
+===================================================== -->
+
 <section id="galerie" class="section gallery-section">
+
   <div class="section-head">
+
     <div>
+
       <p class="eyebrow dark">GALERIE</p>
-      <h2>Quelques souvenirs du désert</h2>
-      <p>Des moments à vivre, photographier et partager.</p>
+
+      <h2>
+        Quelques souvenirs du désert
+      </h2>
+
+      <p>
+        Des moments à vivre, photographier et partager.
+      </p>
+
     </div>
+
   </div>
+
   <div class="gallery">
+
     <img src="dromadaires.jpg" alt="Dromadaires dans le Sahara">
     <img src="desertmaroc.jpg" alt="Désert marocain">
     <img src="CIELK.jpg" alt="Paysage du Sahara">
@@ -766,160 +1947,442 @@
     <img src="MERZ.jpg" alt="Paysage de Merzouga">
     <img src="RABAT.jpg" alt="Paysage de Merzouga">
     <img src="AGAFAY.jpg" alt="Paysage de Merzouga">
+
   </div>
+
 </section>
 
-<!-- TÉMOIGNAGES -->
+
+<!-- =====================================================
+     TÉMOIGNAGES
+===================================================== -->
+
 <section id="temoignages" class="testimonials">
+
   <div class="section-head light">
+
     <div>
+
       <p class="eyebrow">TÉMOIGNAGES</p>
+
       <h2>Ils ont vécu l'aventure</h2>
+
     </div>
+
   </div>
+
   <div class="testimonial-grid">
+
     <blockquote>
-      <p>“Une expérience magique ! Tout était parfaitement organisé et notre guide était formidable.”</p>
+
+      <p>
+        “Une expérience magique ! Tout était parfaitement organisé
+        et notre guide était formidable.”
+      </p>
+
       <strong>Sophie L.</strong>
+
       <span>★★★★★</span>
+
     </blockquote>
+
+
     <blockquote>
-      <p>“Le coucher de soleil sur les dunes est tout simplement incroyable. Merci à toute l'équipe !”</p>
+
+      <p>
+        “Le coucher de soleil sur les dunes est tout simplement incroyable.
+        Merci à toute l'équipe !”
+      </p>
+
       <strong>Thomas B.</strong>
+
       <span>★★★★★</span>
+
     </blockquote>
+
+
     <blockquote>
-      <p>“Un voyage authentique, des gens formidables et des paysages à couper le souffle.”</p>
+
+      <p>
+        “Un voyage authentique, des gens formidables
+        et des paysages à couper le souffle.”
+      </p>
+
       <strong>Camille D.</strong>
+
       <span>★★★★★</span>
+
     </blockquote>
+
   </div>
+
 </section>
 
-<!-- CONTACT -->
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
 <section id="contact" class="contact section">
+
   <div>
-    <p class="eyebrow dark">CONTACT</p>
-    <h2>Prêt à découvrir Merzouga ?</h2>
-    <p>Envoyez-nous votre demande. Nous vous répondrons rapidement pour préparer votre séjour.</p>
+
+    <p class="eyebrow dark">
+      CONTACT
+    </p>
+
+    <h2>
+      Prêt à découvrir Merzouga ?
+    </h2>
+
+    <p>
+      Envoyez-nous votre demande.
+      Nous vous répondrons rapidement pour préparer votre séjour.
+    </p>
 
     <div class="contact-info">
-      <p>📞 <a href="tel:+212669486946">+212 6 69 48 69 46</a></p>
-      <p>✉️ <a href="mailto:mbenhssain@enameknes.ac.ma">mbenhssain@enameknes.ac.ma</a></p>
-      <p>📍 Merzouga, Maroc</p>
-      <p>💬 <a href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20souhaite%20avoir%20plus%20d'informations." target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+
+      <p>
+        📞
+        <a href="tel:+212669486946">
+          +212 6 69 48 69 46
+        </a>
+      </p>
+
+      <p>
+        ✉️
+        <a href="mailto:mbenhssain@enameknes.ac.ma">
+          mbenhssain@enameknes.ac.ma
+        </a>
+      </p>
+
+      <p>
+        📍 Merzouga, Maroc
+      </p>
+
+      <p>
+        💬
+        <a
+          href="https://wa.me/212669486946?text=Bonjour%20Merzouga%20Luxury%20Desert%2C%20je%20souhaite%20avoir%20plus%20d'informations."
+          target="_blank"
+          rel="noopener noreferrer">
+          WhatsApp
+        </a>
+      </p>
+
     </div>
+
   </div>
 
-  <form id="contactForm" action="https://formsubmit.co/mbenhssain@enameknes.ac.ma" method="POST">
-    <input type="hidden" name="_subject" value="Nouvelle demande - Merzouga Luxury Desert">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_captcha" value="true">
 
-    <input type="text" name="Nom" placeholder="Votre nom" required>
-    <input type="email" name="Email" placeholder="Votre email" required>
-    <input type="tel" name="Telephone" placeholder="Téléphone / WhatsApp" required>
+  <form
+    id="contactForm"
+    action="https://formsubmit.co/mbenhssain@enameknes.ac.ma"
+    method="POST">
+
+    <input
+      type="hidden"
+      name="_subject"
+      value="Nouvelle demande - Merzouga Luxury Desert">
+
+    <input
+      type="hidden"
+      name="_template"
+      value="table">
+
+    <input
+      type="hidden"
+      name="_captcha"
+      value="true">
+
+
+    <input
+      type="text"
+      name="Nom"
+      placeholder="Votre nom"
+      required>
+
+
+    <input
+      type="email"
+      name="Email"
+      placeholder="Votre email"
+      required>
+
+
+    <input
+      type="tel"
+      name="Telephone"
+      placeholder="Téléphone / WhatsApp"
+      required>
+
 
     <select name="Circuit" required>
-      <option value="">Choisissez une expérience</option>
+
+      <option value="">
+        Choisissez une expérience
+      </option>
+
       <optgroup label="Au départ de Merzouga">
-        <option value="Merzouga Express">Merzouga Express (2J/1N)</option>
-        <option value="Expérience Sahara">Expérience Sahara (3J/2N)</option>
-        <option value="Aventure 4x4">Aventure 4×4 (4J/3N)</option>
-        <option value="Séjour privé">Séjour privé (Sur mesure)</option>
+
+        <option value="Merzouga Express">
+          Merzouga Express (2J/1N)
+        </option>
+
+        <option value="Expérience Sahara">
+          Expérience Sahara (3J/2N)
+        </option>
+
+        <option value="Aventure 4x4">
+          Aventure 4×4 (4J/3N)
+        </option>
+
+        <option value="Séjour privé">
+          Séjour privé (Sur mesure)
+        </option>
+
       </optgroup>
+
+
       <optgroup label="Au départ de Fès">
-        <option value="Fès: Le magnifique Sahara">Le magnifique Sahara (4 Jours)</option>
-        <option value="Fès: Un soupçon de Sahara">Un soupçon de Sahara (3 Jours)</option>
-        <option value="Fès: Aventure dans le désert">Aventure dans le désert (3 Jours)</option>
-        <option value="Fès: Tour Fès à Marrakech">Tour Fès - Désert - Marrakech (4 Jours)</option>
+
+        <option value="Fès: Le magnifique Sahara">
+          Le magnifique Sahara (4 Jours)
+        </option>
+
+        <option value="Fès: Un soupçon de Sahara">
+          Un soupçon de Sahara (3 Jours)
+        </option>
+
+        <option value="Fès: Aventure dans le désert">
+          Aventure dans le désert (3 Jours)
+        </option>
+
+        <option value="Fès: Tour Fès à Marrakech">
+          Tour Fès - Désert - Marrakech (4 Jours)
+        </option>
+
       </optgroup>
+
+
       <optgroup label="Au départ de Marrakech">
-        <option value="Marrakech: L'Évasion Saharienne">L'Évasion Saharienne (3 Jours)</option>
-        <option value="Marrakech: Privilège Saharien">Privilège Saharien (4 Jours)</option>
-        <option value="Marrakech: Circuit Trans-Saharien">Circuit Trans-Saharien vers Fès (3 Jours)</option>
-        <option value="Marrakech: Luxe Express Agafay">Luxe Express Agafay (2 Jours)</option>
+
+        <option value="Marrakech: L'Évasion Saharienne">
+          L'Évasion Saharienne (3 Jours)
+        </option>
+
+        <option value="Marrakech: Privilège Saharien">
+          Privilège Saharien (4 Jours)
+        </option>
+
+        <option value="Marrakech: Circuit Trans-Saharien">
+          Circuit Trans-Saharien vers Fès (3 Jours)
+        </option>
+
+        <option value="Marrakech: Luxe Express Agafay">
+          Luxe Express Agafay (2 Jours)
+        </option>
+
       </optgroup>
+
+
       <optgroup label="Au départ de Casablanca">
-        <option value="Casablanca: Grand Circuit Imperial & Désert">Grand Circuit Imperial & Désert (5 Jours)</option>
-        <option value="Casablanca: La Grande Boucle Marocaine">La Grande Boucle Marocaine (6 Jours)</option>
-        <option value="Casablanca: Casablanca Express Sahara">Casablanca Express Sahara (4 Jours)</option>
-        <option value="Casablanca: Casablanca VIP Désert Tour">Casablanca VIP Désert Tour (Sur mesure)</option>
+
+        <option value="Casablanca: Grand Circuit Imperial & Désert">
+          Grand Circuit Imperial & Désert (5 Jours)
+        </option>
+
+        <option value="Casablanca: La Grande Boucle Marocaine">
+          La Grande Boucle Marocaine (6 Jours)
+        </option>
+
+        <option value="Casablanca: Casablanca Express Sahara">
+          Casablanca Express Sahara (4 Jours)
+        </option>
+
+        <option value="Casablanca: Casablanca VIP Désert Tour">
+          Casablanca VIP Désert Tour (Sur mesure)
+        </option>
+
       </optgroup>
+
     </select>
 
-    <textarea name="Message" rows="5" placeholder="Votre message" required></textarea>
-    <button class="btn btn-primary" type="submit">Envoyer ma demande →</button>
+
+    <textarea
+      name="Message"
+      rows="5"
+      placeholder="Votre message"
+      required>
+    </textarea>
+
+
+    <button
+      class="btn btn-primary"
+      type="submit">
+      Envoyer ma demande →
+    </button>
+
   </form>
+
 </section>
 
 </main>
 
-<!-- FOOTER -->
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer class="footer">
+
   <div>
-    <div class="footer-logo">Merzouga <span>Luxury Desert</span></div>
-    <p>Plus qu'un voyage, une expérience au cœur du Sahara marocain.</p>
+
+    <div class="footer-logo">
+      Merzouga
+      <span>Luxury Desert</span>
+    </div>
+
+    <p>
+      Plus qu'un voyage, une expérience au cœur du Sahara marocain.
+    </p>
+
   </div>
+
+
   <div>
+
     <h4>Navigation</h4>
+
     <a href="/">Accueil</a>
     <a href="/#apropos">À propos</a>
     <a href="/circuits">Circuits</a>
     <a href="/#galerie">Galerie</a>
     <a href="/#contact">Contact</a>
+
   </div>
+
+
   <div>
+
     <h4>Contact</h4>
+
     <p>+212 6 69 48 69 46</p>
+
     <p>Merzouga, Maroc</p>
+
     <p>mbenhssain@enameknes.ac.ma</p>
+
   </div>
+
+
   <div>
+
     <h4>Réseaux sociaux</h4>
+
     <div class="social">
+
       <a href="#">Instagram</a>
+
       <a href="#">Facebook</a>
-      <a href="https://wa.me/212669486946" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+
+      <a
+        href="https://wa.me/212669486946"
+        target="_blank"
+        rel="noopener noreferrer">
+        WhatsApp
+      </a>
+
     </div>
+
   </div>
+
+
   <div class="copyright">
-    © 2026 Merzouga Luxury Desert. Tous droits réservés.
+
+    © 2026 Merzouga Luxury Desert.
+    Tous droits réservés.
+
   </div>
+
 </footer>
 
-<!-- JAVASCRIPT MODALES -->
+
+<!-- =====================================================
+     JAVASCRIPT MODALES
+===================================================== -->
+
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const openButtons = document.querySelectorAll('.open-modal');
-    const closeButtons = document.querySelectorAll('.modal-close');
-    const modals = document.querySelectorAll('.modal');
 
-    // Ouvrir la modale
-    openButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const modalId = button.getAttribute('data-modal');
-        const modal = document.getElementById(modalId);
-        if (modal) modal.classList.add('active');
-      });
+document.addEventListener('DOMContentLoaded', () => {
+
+  const openButtons =
+    document.querySelectorAll('.open-modal');
+
+  const closeButtons =
+    document.querySelectorAll('.modal-close');
+
+  const modals =
+    document.querySelectorAll('.modal');
+
+
+  /* OUVRIR LA MODALE */
+
+  openButtons.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+      const modalId =
+        button.getAttribute('data-modal');
+
+      const modal =
+        document.getElementById(modalId);
+
+      if (modal) {
+        modal.classList.add('active');
+      }
+
     });
 
-    // Fermer via le bouton de fermeture
-    closeButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        button.closest('.modal').classList.remove('active');
-      });
-    });
-
-    // Fermer en cliquant à l'extérieur de la fenêtre
-    window.addEventListener('click', (event) => {
-      modals.forEach(modal => {
-        if (event.target === modal) {
-          modal.classList.remove('active');
-        }
-      });
-    });
   });
+
+
+  /* FERMER AVEC LE X */
+
+  closeButtons.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+      const modal =
+        button.closest('.modal');
+
+      if (modal) {
+        modal.classList.remove('active');
+      }
+
+    });
+
+  });
+
+
+  /* FERMER EN CLIQUANT À L'EXTÉRIEUR */
+
+  window.addEventListener('click', (event) => {
+
+    modals.forEach(modal => {
+
+      if (event.target === modal) {
+
+        modal.classList.remove('active');
+
+      }
+
+    });
+
+  });
+
+});
+
 </script>
 
 </body>
